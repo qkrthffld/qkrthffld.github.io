@@ -1,0 +1,518 @@
+@import url(normaliz.min.css);
+@import url(reset.css);
+
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #202020;
+}
+
+
+/* main */
+.cukerimg{
+    background: url(../img/cuker/main_cuker.JPG)no-repeat;
+    background-size: 100%;
+    height: 100vh;
+    position: relative;
+}
+.cukerimg .main_text{
+    position: absolute;
+}
+.cukerimg .main_text h2{
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 35px;
+}
+.cukerimg .main_text h1{
+    font-size: 55px;
+    font-weight: 500;
+    padding-bottom: 104px;
+}
+.cukerimg .main_text p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* menu */
+
+.menu{
+    width: 100%;
+}
+.menu_text{
+    text-align: center;
+}
+.menu_text h1{
+    font-size: 55px;
+    padding-bottom: 108px;
+}
+.menu_text h1 em{
+    font-weight: bold;
+}
+.menu_text p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu_links {
+    display: flex;
+    gap: 24px;
+    overflow: hidden;
+    padding-top:72px;
+}
+
+.menu_links .dining a{
+    background: url(../img/cuker/menu/dining.JPG) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 136%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -76px -122px;
+}
+.menu_links .dining p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .kor a{
+    background: url(../img/cuker/menu/korea.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 193%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -108px -431px;
+}
+.menu_links .kor p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .steak a{
+    background: url(../img/cuker/menu/steak.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 175%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -151px -135px;
+}
+.menu_links .steak p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .asian a{
+    background: url(../img/cuker/menu/asian.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 100%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: 0px -152px;
+}
+.menu_links .asian p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .pasta a{
+    background: url(../img/cuker/menu/pasta.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 114%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -38px -86px;
+}
+.menu_links .pasta p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .hotdog a{
+    background: url(../img/cuker/menu/hotdog.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 114%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -38px -86px;
+}
+.menu_links .hotdog p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .tteokbokki a{
+    background: url(../img/cuker/menu/tteokbokki.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 166%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -140px -21px;
+}
+.menu_links .tteokbokki p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .dumpling a{
+    background: url(../img/cuker/menu/dumpling2.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 166%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -140px -21px;
+}
+.menu_links .dumpling p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .health a{
+    background: url(../img/cuker/menu/health.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 259%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -263px -635px;
+}
+.menu_links .recipe p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+.menu_links .recipe a{
+    background: url(../img/cuker/menu/recipe.jpg) no-repeat;
+    width: 342px;
+    height: 340px;
+    background-size: 163%;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    background-position: -100px -225px;
+}
+.menu_links .health p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 4px 2px 3px rgba(0,0,0,.2);
+    color: #fff;
+}
+
+/* brand */
+.brand{
+    margin-top: 194px;
+}
+.brand_text{
+    text-align: center;
+}
+.brand_text h1{
+    font-size: 55px;
+    padding-bottom: 108px;
+}
+.brand_text h1 em{
+    font-weight: bold;
+}
+.brand_text p{
+    font-size: 20px;
+    font-weight: 500;
+}
+/* #f0f0f0 */
+.brand_links{
+    display: flex;
+    justify-content: center;
+    padding-top: 82px;
+}
+.brand_list{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 1441px;   
+}
+
+.brand_links a{
+    width:220px;
+    height: 80px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.brand_links .cj01 a{
+    background: url(../img/cuker/logo/cj01.png) no-repeat #f0f0f0 center;
+    background-size: 70%;
+}
+.brand_links .cj02 a{
+    background: url(../img/cuker/logo/cj02.png) no-repeat #f0f0f0 center;
+    background-size: 62%;
+}
+.brand_links .fredit a{
+    background: url(../img/cuker/logo/fredit.png) no-repeat #f0f0f0 center;
+    background-size: 62%;
+}
+.brand_links .daesang a{
+    background: url(../img/cuker/logo/daesang.png) no-repeat #f0f0f0 center;
+    background-size: 87%;
+}
+.brand_links .dongwon a{
+    background: url(../img/cuker/logo/dongwon.png) no-repeat #f0f0f0 center;
+    background-size: 62%;
+}
+.brand_links .ranking a{
+    background: url(../img/cuker/logo/ranking.png) no-repeat #f0f0f0 center;
+    background-size: 64%;
+}
+.brand_links .mychef a{
+    background: url(../img/cuker/logo/mychef.png) no-repeat #f0f0f0 center;
+    background-size: 62%;
+}
+.brand_links .kitchen a{
+    background: url(../img/cuker/logo/kitchenstory_black.png) no-repeat #f0f0f0 center;
+    background-size: 54%;
+}
+.brand_links .shinsegae a{
+    background: url(../img/cuker/logo/sinsegaefood.png) no-repeat #f0f0f0 center;
+    background-size: 76%;
+}
+.brand_links .entree a{
+    background: url(../img/cuker/logo/entree.png) no-repeat #f0f0f0 center;
+    background-size: 62%;
+}
+.brand_links .ottgi a{
+    background: url(../img/cuker/logo/ottgi.png) no-repeat #f0f0f0 center;
+    background-size: 70%;
+}
+.brand_links .onthe a{
+    background: url(../img/cuker/logo/open-the-table.png) no-repeat #f0f0f0 center;
+    background-size: 76%;
+}
+.brand_links .kaviar a{
+    background: url(../img/cuker/logo/kaviar.png) no-repeat #f0f0f0 center;
+    background-size: 81%;
+}
+.brand_links .tasty a{
+    background: url(../img/cuker/logo/tasty.png) no-repeat #f0f0f0 center;
+    background-size: 76%;
+}
+.brand_links .pulmuone a{
+    background: url(../img/cuker/logo/pulmuone.png) no-repeat #f0f0f0 center;
+    background-size: 65%;
+}
+.brand_links .fresheasy a{
+    background: url(../img/cuker/logo/fresheasy.png) no-repeat #f0f0f0 center;
+    background-size: 65%;
+}
+.brand_links li:hover a{
+    width:220px;
+    height: 80px;
+    border-radius: 10px;
+    display: inline-block;
+    background: #3e89dd;
+}
+.brand_links li p{
+    opacity: 0;
+}
+.brand_links li:hover p{
+    opacity: 1;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
+}
+
+/* best menu */
+.best_text{
+    text-align: center;
+    padding-top: 198px;
+}
+.best_text h1{
+    font-size: 55px;
+    padding-bottom: 108px;
+}
+.best_text h1 em{
+    font-weight: bold;
+}
+.best_text p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.best .best_ct{
+    margin-top: 30px;
+}
+.best .list_all > div {
+    width: 463px;
+    height: 730px;
+    border: 1px solid #d2d2d2;
+    border-radius: 15px;
+}
+.best .list_all > .best_list01 span{
+    width: 463px;
+    height: 351px;
+    background: url(../img/cuker/item01.JPG) no-repeat ;
+    background-size: 121%;
+    background-position: -54px -21px;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+.best .list_all > .best_list02 span{
+    width: 463px;
+    height: 351px;
+    background: url(../img/cuker/item02.JPG) no-repeat ;
+    background-size: 142%;
+    background-position: -56px -37px;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+.best .list_all > .best_list03 span{
+    width: 463px;
+    height: 351px;
+    background: url(../img/cuker/item03.JPG) no-repeat ;
+    background-size: 121%;
+    background-position: -54px -21px;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+.best .list_all > .best_list04 span{
+    width: 463px;
+    height: 351px;
+    background: url(../img/cuker/item04.JPG) no-repeat ;
+    background-size: 102%;
+    background-position: -2px -52px;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+.best .list_all > .best_list05 span{
+    width: 463px;
+    height: 351px;
+    background: url(../img/cuker/item05.JPG) no-repeat ;
+    background-size: 127%;
+    background-position: -2px -127px;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+.best .list_all > .best_list06 span{
+    width: 463px;
+    height: 351px;
+    background: url(../img/cuker/item06.JPG) no-repeat ;
+    background-size: 76%;
+    background-position: 51px 16px;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+.best .list_all .best_ct img {
+    width: 109px;
+    margin: 0 auto;
+    display: block;
+}
+.best .list_all .best_ct .ot_size {
+    width: 170px;
+    display:block;
+}
+.best_ct .price{
+    width: 411px;
+    margin: 0 auto;
+    padding-top: 68px;
+}
+.best_ct > .ot_pad{
+    padding-top:35px;
+}
+.best_ct > h3{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 25px;
+}
+.list_all .best_ct .price > div {
+    font-size: 17px;
+    color:#4a4a4a;
+    display: flex;
+    justify-content: space-between;
+    line-height: 24px;
+}
+.best_wrap{
+    display: flex;
+    justify-content: center; 
+    padding-top: 82px;
+}
+.list_all{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+    width: 1441px;
+       
+}
+.list_all .best_ct .price > div:nth-child(3){
+    font-size: 24px;
+    font-weight: bold;
+    color:#3e89dd;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6px;
+}
+.list_all .best_ct .price > div:nth-child(4){
+    padding-top: 34px;
+    justify-content: center;
+}
+.list_all .best_ct .price > div:nth-child(4) a{
+    border: 1px solid #202020;
+    width: 113px;
+    height: 27px;
+    border-radius: 42px;
+    padding: 5px 24px;
+}
+.list_all .best_ct .price > div:nth-child(4) a:hover{
+    border: 1px solid #3e89dd;
+    background-color: #3e89dd;
+    width: 113px;
+    height: 27px;
+    border-radius: 42px;
+    padding: 5px 24px;
+    color: #fff;
+}
+.best_ct .price a > i{
+    padding-left:10px;
+}
+

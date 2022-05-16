@@ -1,0 +1,71 @@
+@import url(normaliz.min.css);
+@import url(reset.css);
+
+:root{
+    --main-color : #202020;
+    --white : #fff;
+    --con-width : 1642px;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 메인 네비게이션 */
+.container{
+    width: var(--con-width);
+    padding-top: 81px;
+    margin: 0 auto;
+}
+.logo a{
+    background: url(../img/icon/samsung-logo.png) no-repeat;
+    width:247px;
+    height: 46px;
+    display: block;
+    background-size: 100%;
+    text-indent: -9999em;
+}
+.nav_wrap {
+    display: flex;
+    align-items: center;
+    /* padding-top: 81px; */
+}
+.menu > ul{
+    display: flex; 
+    gap: 50px;
+    padding-left: 70px;   
+}
+.mlist > ul, .searchbox {
+    display: none;
+}
+.mlist{
+    font-size: 20px;
+    font-weight: bold;
+}
+.blank_item{
+    display: flex;
+    font-size: 16px;
+    gap:34px;
+}
+.top_links{
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+    padding-left: 216px;
+}
+.top_links .search{
+    background: url(../img/icon/search.svg) no-repeat;
+    width: 26px;
+    height: 26px;
+}
+.top_links .cart{
+    background: url(../img/icon/cart.svg) no-repeat;
+    width: 26px;
+    height: 26px;
+}
+.top_links .user{
+    background: url(../img/icon/user.png) no-repeat;
+    background-size: 100%;
+    width: 26px;
+    height: 26px;
+}
