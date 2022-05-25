@@ -428,21 +428,34 @@ body {
 
 
 /* SECTION03 - LED */
+
+/*
 .main_section03{
     height: 100vh;
-    position: relative;
-    
+    position: relative; 
+    overflow: hidden;
 }
 .led_imgs{
+    height: 100%;
     position: absolute;
-    width: 100%;
+    transition: left 0.4s ease-out;
+    display: flex;
+    width: 400%;
+    left: 0;
 }
 .led_imgs li{
-    height: 100vh;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: cover;
 }
 .led_imgs .img_lg{
     background: url(../img/index/mainbg_1.jpg) no-repeat;
     background-size: cover;
+    
 }
 .led_imgs .img_md{
     background: url(../img/index/mainbg_2.jpg) no-repeat;
@@ -451,4 +464,301 @@ body {
 .led_imgs .img_sm{
     background: url(../img/index/mainbg_3.jpg) no-repeat;
     background-size: cover
+}
+.led_ct .bg{
+    background: url(../img/index/background_bg.png);
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+}
+.led_ct .led_text{
+    color: #fff;
+    position: absolute;
+    top: 50%;  
+    margin-left: 13%;
+    transform: translateY(-50%);
+}
+.led_ct .led_text > h2{
+    font-size: 55px;
+    font-weight: bold;
+}
+.led_ct .led_text > p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    padding-top: 97px;
+    padding-bottom: 48px;
+}
+.led_ct .led_text > a{
+    width: 250px;
+    height: 60px;
+    border-radius: 35px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    display: block;
+}
+.led_ct .led_text > a:hover{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #202020;
+}
+.led_ct .led_text > a > i {
+    padding-left:10px;
+}
+*/
+
+/* .main_section03{
+    height: 100vh;
+    position: relative; 
+    overflow: hidden;
+} */
+
+
+.led_imgs{
+    height: 100vh;
+    position: relative;
+    transition: left 0.4s ease-out;
+    /* display: flex; */
+    width: 100%;
+}
+.led_imgs li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.led_imgs .img_lg{
+    background: url(../img/index/mainbg_1.jpg) no-repeat;
+    background-size: cover;
+    z-index: 2;
+    
+}
+.led_imgs .img_md{
+    background: url(../img/index/mainbg_2.jpg) no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.led_imgs .img_sm{
+    background: url(../img/index/mainbg_3.jpg) no-repeat;
+    background-size: cover
+}
+.led_ct{
+    z-index: 3;
+}
+.led_ct .bg{
+    background: url(../img/index/background_bg01.png);
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+}
+.led_ct .led_text{
+    color: #fff;
+    position: absolute;
+    top: 50%;  
+    margin-left: 11%;
+    transform: translateY(-50%);
+}
+.led_ct .led_text > h2{
+    font-size: 55px;
+    font-weight: bold;
+}
+.led_ct .led_text > p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    padding-top: 97px;
+    padding-bottom: 48px;
+}
+.led_ct .led_text > a{
+    width: 250px;
+    height: 60px;
+    border-radius: 35px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    display: block;
+}
+.led_ct .led_text > a:hover{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #202020;
+}
+.led_ct .led_text > a > i {
+    padding-left:10px;
+}
+
+
+
+/* SECTION04 - BESPOKE */
+
+.main_section04{
+    position: relative;
+}
+.bespoke_img{
+    display: flex;
+    position: relative;
+    width: 500%;
+    background-size: contain;
+    left: -300%;
+    overflow: hidden;
+}
+.bespoke_img .black{
+    background: url(../img/index/bespoke1.PNG) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+.bespoke_img .gold{
+    background: url(../img/index/bespoke2.PNG) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+.bespoke_img .warm{
+    background: url(../img/index/bespoke3.PNG) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+.bespoke_img .brown{
+    background: url(../img/index/bespoke4.PNG) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+.bespoke_img .gray{
+    background: url(../img/index/bespoke5.PNG) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+.color_btn{
+    position: absolute;
+    display: flex;
+    top: 85%;
+    left: 70%;
+    gap: 35px;
+    z-index: 10;   
+}
+.color_btn a{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+.color_btn .black_btn {
+    background-color: #202020; 
+}
+.color_btn .black_btn:active:after {
+    position: absolute;
+    content: '';
+    border: 7px solid #dfdfdf;
+    background-color: #202020;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    inset: -3px;
+}
+.color_btn .gold_btn {
+    background-color: #dcd3c3;
+}
+.color_btn .gold_btn:active:after {
+    position: absolute;
+    content: '';
+    border: 7px solid #836b4c;
+    background-color: #dcd3c3;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    inset: -3px;
+}
+.color_btn .warm_btn {
+    background-color: #fff;
+}
+.color_btn .warm_btn:active:after {
+    position: absolute;
+    content: '';
+    border: 7px solid #dfdfdf;
+    background-color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    inset: -3px;
+}
+.color_btn .brown_btn {
+    background-color: #6a5750;
+}
+.color_btn .brown_btn:active:after {
+    position: absolute;
+    content: '';
+    border: 7px solid #887b70;
+    background-color: #6a5750;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    inset: -3px;
+}
+.color_btn .gray_btn {
+    background-color: #7b7a75;
+}
+.color_btn .gray_btn:active:after {
+    position: absolute;
+    content: '';
+    border: 7px solid #b2b1aa;
+    background-color: #7b7a75;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    inset: -3px;
+}
+
+.bespoke_ct .bg{
+    background: url(../img/index/background_bg01.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bespoke_ct .bespoke_text{
+    color: #fff;
+    position: absolute;
+    top: 50%;  
+    margin-left: 11%;
+    transform: translateY(-50%);
+}
+.bespoke_ct .bespoke_text > h2{
+    font-size: 55px;
+    font-weight: bold;
+}
+.bespoke_ct .bespoke_text > p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    padding-top: 97px;
+    padding-bottom: 48px;
+}
+.bespoke_ct .bespoke_text > a{
+    width: 250px;
+    height: 60px;
+    border-radius: 35px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    display: block;
+}
+.bespoke_ct .bespoke_text > a:hover{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #202020;
+}
+.bespoke_ct .bespoke_text > a > i {
+    padding-left:10px;
 }
