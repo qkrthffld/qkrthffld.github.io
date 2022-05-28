@@ -1,11 +1,12 @@
 @import url(normaliz.min.css);
 @import url(reset.css);
 
-body {
+body,main{
     font-family: 'Noto Sans KR', sans-serif;
     color: #202020;
     height: 100vh;
 }
+
 
 
 /* HEADER - NAVIGATION */
@@ -16,6 +17,7 @@ body {
     width: 100%;
     z-index: 700;
 }
+
 .header .fixed_wrap{
     /* position: absolute; */
     top: 0;
@@ -49,6 +51,16 @@ body {
     background-size: 100%;
     z-index: 703px;
 }
+
+.header .logo .logo_img_black {
+    background: url(../img/icon/samsung-logo.png) no-repeat;
+    display: block;
+    width: 222px;
+    height: 100%;
+    background-size: 100%;
+    z-index: 703px;
+}
+
 .header .menu_blank_wrap {
     display: flex;
     gap: 28px;
@@ -597,14 +609,20 @@ body {
 
 .main_section04{
     position: relative;
+    height: 100vh;
 }
+/* .bespoke_wrap{
+    position: relative;
+} */
 .bespoke_img{
     display: flex;
-    position: relative;
-    width: 500%;
+    /* position: relative; */
+    width: 100%;
     background-size: contain;
-    left: -300%;
     overflow: hidden;
+}
+.bespoke_img > li{
+    position: absolute;
 }
 .bespoke_img .black{
     background: url(../img/index/bespoke1.PNG) no-repeat;
@@ -717,6 +735,9 @@ body {
     inset: -3px;
 }
 
+.bespoke_ct{
+    z-index: 20;
+}
 .bespoke_ct .bg{
     background: url(../img/index/background_bg01.png);
     background-size: cover;
@@ -761,4 +782,402 @@ body {
 }
 .bespoke_ct .bespoke_text > a > i {
     padding-left:10px;
+}
+
+
+/* SECTION04 - CONTENT */
+
+/*
+.main_section05{
+    height: 100vh;
+    background-color: #245;
+    
+}
+.all_content {
+    position: relative;
+}
+
+.all_content li > a {
+    width: 479px;
+    height: 349px;
+    display: inline-block;
+    position: relative;
+}
+
+.all_content > li > a::after{
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    top: 0; 
+   }
+.all_content .collage{
+    color: #fff;
+    margin-top: 241px;
+    margin-left: 50px;
+}
+
+.all_content .collage h2{
+    font-size: 28px;
+    font-weight: bold;
+}
+.all_content .collage p{
+    font-size: 17px;
+    font-weight: 500;
+    padding-top: 19px;
+}
+.planning > a{
+    background: url(../img/index/planning.PNG) no-repeat;
+    background-position: -238px -2px;
+    background-size: 194%;
+}
+.event > a{
+    background: url(../img/index/event.PNG) no-repeat;
+    background-position: -569px -28px;
+    background-size: 223%;
+}
+.cuker > a{
+    background: url(../img/index/cuker.PNG) no-repeat;
+    background-position: -278px -107px;
+    background-size: 158%;
+}
+.sm_within > a{
+    background: url(../img/index/samsung_within.PNG) no-repeat;
+    background-position: -9px -52px;
+    background-size: 102%;
+}
+.membership > a{
+    background: url(../img/index/membership.jpg) no-repeat;
+    background-position: -1602px -49px;
+    background-size: 448%;
+}
+.service > a{
+    background: url(../img/index/service.jpg) no-repeat;
+    background-position: -146px -44px;
+    background-size: 131%;
+}
+
+*/
+
+.main_section05{
+    height: 100vh;    
+}
+.all_ct_wrapper{
+    position: relative;
+    top: 52%;
+    transform: translateY(-44%);
+}
+.all_content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1300px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.all_content li{
+    width: 380px;
+    height: 280px;
+    display: inline-block;
+    position: relative;
+}
+.all_content > li > a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.all_content > li > a:hover{
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    transition: 0.5s;
+}
+.all_content .collage{
+    color: #fff;
+    margin-top: 177px;
+    margin-left: 36px;
+    opacity: 0;
+}
+.all_content > li > a:hover .collage{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.all_content .collage h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+.all_content .collage p{
+    font-size: 17px;
+    font-weight: 500;
+    padding-top: 19px;
+}
+
+.planning{
+    background: url(../img/index/planning.PNG) no-repeat;
+    background-position: -198px -2px;
+    background-size: 197%;
+}
+.event{
+    background: url(../img/index/event.PNG) no-repeat;
+    background-position: -477px -28px;
+    background-size: 228%;
+}
+.cuker{
+    background: url(../img/index/cuker.PNG) no-repeat;
+    background-position: -237px -106px;
+    background-size: 168%;
+}
+.sm_within{
+    background: url(../img/index/samsung_within.PNG) no-repeat;
+    background-position: -4px -43px;
+    background-size: 102%;
+}
+.membership{
+    background: url(../img/index/membership.jpg) no-repeat;
+    background-position: -1453px -76px;
+    background-size: 506%;
+}
+.service{
+    background: url(../img/index/service.jpg) no-repeat;
+    background-position: -106px -39px;
+    background-size: 128%;
+}
+
+
+
+
+/* footer_content */
+
+.footer_content{
+    width: 1411px;
+    margin: 0 auto;
+    /* background: #458792; */
+    padding-top: 107px;
+    padding-bottom: 28px;
+}
+.footer_content > ul{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    width: var(--con-width);
+    margin: 0 auto;
+}
+.footer_content ul > li > div {
+    display: flex;
+}
+.footer_content ul > li > div > ul:last-child{
+    padding-left: 100px;
+}
+.footer_content h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer_content h3 > i{
+    font-size: 16px;
+    padding-left: 10px;
+}
+.footer_content .link li {
+    padding-top: 20px;
+    /*line-height: 35px;*/
+}
+.footer_content .link li a{
+    font-size: 17px;
+    color: var(--sub-color);
+}
+.line{
+    border: 1px solid rgba(74,74,74,.1);
+    margin: 50px 0;
+}
+
+
+/* footer_ct */
+
+.footer_ct{
+    width: var(--con-width);
+    margin: 0 auto;
+    font-size: 16px;
+    color: var(--sub-color);
+    width: var(--con-width);
+    margin: 0 auto;
+}
+.lang{
+    display: flex;
+}
+.lang > ul{
+    display: flex;
+    gap:17px;
+    align-items: center;
+}
+.lang > ul > li{
+    position: relative;
+    font-weight: bold;
+}
+.lang > ul > li:after{
+    content: '';
+    width: 1px;
+    height: 18px;
+    background: var(--sub-color);
+    position: absolute;
+    right: -20px;
+}
+.lang > ul > li:last-child:after{
+    background: none;
+}
+#use_ct{
+    min-height: 44px;
+    width: 290px;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    box-sizing: border-box;
+    background-color: var(--white);
+    text-align: left;
+    cursor: pointer;
+    padding-left: 14px;
+    font-size: 17px; 
+}
+
+.acodian{
+    display: flex;
+    gap: 24px;    
+}
+.acodian > div > ul{
+    display: none;
+}
+.dropList01 {
+    padding-left: 32px;
+}
+.icon1 > .fa-solid{
+    padding-left: 180px;
+}
+.icon2 > .fa-solid{
+    padding-left: 114px;
+}
+.footer_ct .sns ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 70px;
+}
+.lang .sns .fbook{
+    background: url(../img/icon/facebook.svg) no-repeat;
+    width:22px;
+    height: 41px; 
+    display: block;
+    background-size: 100%;
+    fill: #202020;
+    filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
+}
+.lang .sns .insta{
+    background: url(../img/icon/instagram.png) no-repeat;
+    width:40px;
+    height: 41px;
+    display: block;
+    background-size: 100%;
+    filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
+}
+.lang .sns .youtube{
+    background: url(../img/icon/youtube.png) no-repeat;
+    width:50px;
+    height: 48px;
+    display: block;
+    background-size: 100%;
+    filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
+}
+.lang .sns .blog{
+    background: url(../img/icon/blog.png) no-repeat;
+    width:43px;
+    height: 41px;
+    display: block;
+    background-size: 100%;
+    filter:invert(58%) sepia(55%) saturate(26%) hue-rotate(375deg) brightness(92%) contrast(90%)
+}
+/* .info .text span{
+    padding-top: 10px;
+} */
+
+.info .text{
+    line-height: 30px;
+    padding-top:50px;
+}
+.info .text .copy{
+    /* padding-top: 30px; */
+    display: block;
+    font-weight: bold; 
+    display: inline-block;
+}
+.info .if01, .if02 {
+    display:flex;
+    gap: 23px;
+}
+.info .if01 span {
+    position: relative;
+}
+.info .if02 span {
+    position: relative;
+}
+.info .if01 span:after{
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #202020;
+    position: absolute;
+    top: 9px;
+    left: -12px;
+}
+.info .if01 span:first-child:after{
+    background: none;
+}
+.info .if01 .info_links{
+    background: #202020;
+    border-radius: 50px;
+    width: 270px;
+    height: 27px;   
+    padding: 1px 10px 
+}
+.info_links{
+    color: #fff;
+}
+.info .if02 span:after{
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #202020;
+    position: absolute;
+    top: 9px;
+    left: -12px;
+}
+.info .if02 span:first-child:after{
+    background: none;
+}
+
+
+.if03{
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+.local_logo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.local_logo a{
+    text-indent: -9999em;
+    display: inline-block;
+    width: 87px;
+    height: 86px;
+}
+.local_logo > a:first-child{
+    background: url(../img/icon/icon1.png) no-repeat;
+    background-size: 100%;
+}
+.local_logo > a:last-child{
+    background: url(../img/icon/icon2.gif) no-repeat;
+    background-size: 100%; 
 }
