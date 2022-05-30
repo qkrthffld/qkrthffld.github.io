@@ -285,6 +285,15 @@ body,main{
     /* filter: invert(10%) sepia(2%) saturate(0%) hue-rotate(32deg) brightness(96%) contrast(92%); */
     cursor: pointer;
 }
+.main_slide .slide_paging .icon_sound_on{
+    width: 50px;
+    height: 50px;
+    background: url(../img/icon/volume.svg) no-repeat;
+    opacity: 1;
+    background-size: cover;
+    cursor: pointer;
+}
+
 .main_slide .slide_paging .fa-pause{
     font-size: 16px;
     color: #fff;
@@ -292,6 +301,14 @@ body,main{
     padding-right: 15px;
     cursor: pointer;
 }
+.main_slide .slide_paging .fa-play:before{
+    font-size: 16px;
+    color: #fff;
+    padding-left: 25px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
 .main_slide .slide_paging .total{
     position: relative;
     padding-left: 28px;
@@ -377,6 +394,7 @@ body,main{
     width:400%;
     position:absolute;
     left:0%;
+    transition: 0.8s;
 }
 
 .swiper_slide{
@@ -1180,4 +1198,8 @@ body,main{
 .local_logo > a:last-child{
     background: url(../img/icon/icon2.gif) no-repeat;
     background-size: 100%; 
+}
+
+.fp-warning, .fp-watermark a {
+    display: none;
 }

@@ -9,6 +9,8 @@
     <meta name="robots" content="all">
     <title>samsung</title>
 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="css/fullpage.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -368,15 +370,9 @@
     <main id="fullpage">
         <section class="main_section01 section">
             <div class="main_slide slide_wrapper">
-                <ul class="slide_container">
+                <ul class="slide_container bxslider">
                     <li class="slide1"> 
-                        <video src="img/index/smsung_smartCf.mp4"></video>
-                        <!-- <div class="video_wrapper">
-                            <video muted autoplay loop>
-                                <source src="img/index/smsung_smartCf.mp4" type="video.mp4">
-                            </video>
-                        </div> -->
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Wu3yheur5yM?controls=0" title="YouTube video player" frameborder="0" allow="autoplay;" allowfullscreen></iframe> -->
+                        <video id="player" src="img/index/smsung_smartCf.mp4" autoplay muted loop ></video>
                     </li>
                     <li class="slide2">
                         <div class="content">
@@ -407,8 +403,10 @@
                         <span class="fill"></span>
                     </div> -->
                     <div class="slide_paging">
-                        <div class="icon_sound"></div>
-                        <i class="fa-solid fa-pause"></i>
+                        <div id="controls">
+                            <div class="sound_btn icon_sound"></div>
+                        </div>
+                        <i class="auto_btn fa-solid fa-pause" onclick="playBtn()"></i>
                         <div class="slide_progressbar">
                             <span class="fill"></span>
                         </div>
@@ -429,10 +427,10 @@
             <div class="swiper-container swiper-tabs-nav">
                 <div class="swiper_active">
                     <ul class="swiper_ct">
-                        <li class="swiper_link on"><a href="">Galaxy S22 | S22+</a></li>
-                        <li class="swiper_link"><a href="">Galaxy A53 5G</a></li>
-                        <li class="swiper_link"><a href="">Galaxy Tab S8 Series</a></li>
-                        <li class="swiper_link"><a href="">Galaxy Watcfh4 | Watch4 Classic</a></li>
+                        <li class="swiper_link on"><a href="javascript:void(0);" onclick="moveTab(0)">Galaxy S22 | S22+</a></li>
+                        <li class="swiper_link"><a href="javascript:void(0);" onclick="moveTab(1)">Galaxy A53 5G</a></li>
+                        <li class="swiper_link"><a href="javascript:void(0);" onclick="moveTab(2)">Galaxy Tab S8 Series</a></li>
+                        <li class="swiper_link"><a href="javascript:void(0);" onclick="moveTab(3)">Galaxy Watcfh4 | Watch4 Classic</a></li>
                     </ul>
                 </div>
                 <div class="swiper-wrapper swiper-tabs-content">
@@ -501,11 +499,11 @@
                 </ul>
             </div>
             <div class="color_btn">
-                <a href="" class="black_btn"></a>
-                <a href="" class="gold_btn"></a>
-                <a href="" class="warm_btn"></a>
-                <a href="" class="brown_btn"></a>
-                <a href="" class="gray_btn"></a>
+                <a href="javascript:void(0);" class="black_btn"></a>
+                <a href="javascript:void(0);" class="gold_btn"></a>
+                <a href="javascript:void(0);" class="warm_btn"></a>
+                <a href="javascript:void(0);" class="brown_btn"></a>
+                <a href="javascript:void(0);" class="gray_btn"></a>
             </div>
     
             <div class="bespoke_ct">
