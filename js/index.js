@@ -9,6 +9,8 @@
 
 
 
+
+
   
   $('#fullpage').fullpage({
     //options here
@@ -16,6 +18,8 @@
     scrollHorizontally: true,
     onLeave: function(origin, destination, direction, trigger){
         var origin = this;
+        console.log(origin.index,destination.index);
+        //destination.index 0 = 최상단, 1 = 
         if (direction == 'down') {
             origin.index = origin.index + 1; 
         } else if (direction == 'up') {
@@ -95,18 +99,6 @@ $('.touch_link > a').mouseleave(function(){
 
 
 
-// $(function(){
-//   $('.sub_category_wrap').hide();
-//   $('.touch_link > a').hover(function(){
-//     $(this).parent().find('.sub_category_wrap').slideDown();
-//     $(this).parent().hover(function(){ 
-//     }),function(){
-//     $(this).parent().find('.sub_category_wrap').slideUp(); 
-//     }
-//   });
-// });
-
-
 $('.sub_category_wrap').hide();
 $('.touch_link > a').hover(
   function(){
@@ -178,17 +170,6 @@ $('.header .header_inner').hover(
 
 
 
-/*
-$('.sub_category_wrap').hover(
-  function(){
-    $(this).parent().find('.sub_category_wrap').stop().slideDown(400);
-  },
-  function(){
-    $(this).parent().find('.sub_category_wrap').stop().slideUp(400);
-  }
-);
-*/
-
 
 
 /* SECTION01 - MAIN */
@@ -220,6 +201,21 @@ function moveSlide(num){
   $('.slide_container').css('left', vLeft);
   slideNum = num;
   $('.current').text(slideNum+1);
+
+  if(slideNum > 0){
+    soundControls.css('visibility', 'hidden')
+    $('.auto_btn').css('visibility', 'hidden')
+    //$('.slide_paging button .fa-solid').css('color', '#202020')
+    $('.colorcg').css('color', '#202020')
+    $('.total').addClass('changed')
+    $('.barcg').addClass('changed')
+
+  }else{
+    soundControls.css('visibility', '')
+    $('.auto_btn').css('visibility', '')
+    $('.colorcg').css('color', '')
+    $('.total').removeClass('changed')
+  }
 }
 
 
@@ -374,3 +370,7 @@ $(function(){
     });
   });
   */
+
+
+  //fp-auto-height : footer 부분의 영역에 마지막 컨테츠 높이만큼만 쓸수 있도록
+  //https://github.com/alvarotrigo/fullPage.js/tree/master/lang/korean#%EA%B5%AC%EC%97%AD%EC%9D%84-%EB%8D%94-%EC%9E%91%EA%B2%8C-%EB%98%90%EB%8A%94-%ED%81%AC%EA%B2%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0

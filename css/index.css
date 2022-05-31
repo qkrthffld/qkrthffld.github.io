@@ -273,6 +273,14 @@ body,main{
     height: 2px;
     background-color: rgba(255, 255, 255, 0.2);
 }
+.main_slide .slide_paging .slide_progressbar .barcg{
+    left: 240px;
+    bottom:149px;
+    /* width: calc(100% - 1254px); */
+    width: 282px;
+    height: 2px;
+    background-color: #202020;
+}
 .main_slide .slide_paging .slide_progressbar .fill{
     position: absolute;
     left: 0;
@@ -324,6 +332,14 @@ body,main{
     width: 1px;
     height: 17px;
     background-color: #fff;
+}
+.main_slide .slide_paging .total.changed::before{
+    content: '';
+    position: absolute;
+    left:13px;
+    width: 1px;
+    height: 17px;
+    background-color: #202020;
 }
 .main_slide .slide_paging button{
     background-color: transparent;
