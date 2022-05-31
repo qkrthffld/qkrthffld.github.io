@@ -110,8 +110,9 @@ body,main{
     
     /* submenu 보기*/
     /* opacity: 0; */
-    display: none;
+    /* display: none; */
 }
+
 .sub_category_box{
     display: flex;
     gap: 75px;
@@ -162,6 +163,9 @@ body,main{
     width: 300%;
     left: 0;
 }
+.slide_container > li > .content{
+    padding-left: 139px;
+} 
 .main_slide li{
     position: relative;
     width: 100%;
@@ -452,6 +456,14 @@ body,main{
     text-align: center;
     line-height: 60px;
     display: block;
+}
+.swiper_slide .gx_content div > a > i{
+    padding-left:10px
+}
+.swiper_slide .gx_content div > a:hover{
+    border: 1px solid #202020;
+    background-color: #202020;
+    color: #fff;
 }
 
 
@@ -1202,4 +1214,7 @@ body,main{
 
 .fp-warning, .fp-watermark a {
     display: none;
+}
+.fp-overflow {
+    overflow-y:overlay;
 }
