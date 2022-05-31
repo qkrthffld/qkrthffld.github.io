@@ -110,14 +110,14 @@ $('.touch_link > a').mouseleave(function(){
 $('.sub_category_wrap').hide();
 $('.touch_link > a').hover(
   function(){
-    $('.sub_category_wrap').stop().slideDown(400);
+    $(this).parent().find('.sub_category_wrap').stop().slideDown(400);
     $('.header_inner').css('background-color','#fff');
     $('.pc_nav > ul > li > a').css('color','black');
     $('.header .logo .logo_img').removeClass('logo_img').addClass("logo_img_black");
     $('.menu_icon_wrap > li').css('filter','none');
   },
   function(){
-    $('.sub_category_wrap').stop().slideUp(400);
+    $(this).parent().find('.sub_category_wrap').stop().slideUp(400);
     $('.header_inner').css('background-color','');
     $('.pc_nav > ul > li > a').css('color','');
     $('.header .logo .logo_img_black').removeClass('logo_img_black').addClass("logo_img");
