@@ -51,16 +51,6 @@ body,main{
     background-size: 100%;
     z-index: 703px;
 }
-
-.header .logo .logo_img_black {
-    background: url(../img/icon/samsung-logo.png) no-repeat;
-    display: block;
-    width: 222px;
-    height: 100%;
-    background-size: 100%;
-    z-index: 703px;
-}
-
 .header .menu_blank_wrap {
     display: flex;
     gap: 28px;
@@ -76,6 +66,8 @@ body,main{
 .header .blank_link > a{
     color: #fff;
 }
+
+
 .header .menu_icon_wrap {
     display: flex;
     gap: 15px;
@@ -88,6 +80,34 @@ body,main{
     filter: invert(100%) sepia(0%) saturate(7475%) hue-rotate(72deg) brightness(108%) contrast(108%);
     overflow: hidden;
 }
+
+
+.light .logo .logo_img {
+    background: url(../img/icon/samsung-logo.png) no-repeat;
+    display: block;
+    width: 222px;
+    height: 100%;
+    background-size: 100%;
+    z-index: 703px;
+}
+.light .touch_link > a{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.light .blank_link > a{
+    color: black;
+}
+.light .menu_icon_wrap li{
+    width: 27px;
+    height: 26px;
+    display: block;
+    filter: invert(0%) sepia(100%) saturate(12%) hue-rotate(355deg) brightness(97%) contrast(100%);
+    overflow: hidden;
+}
+
+
+
 .pc_nav{
     display: flex;
 }
@@ -116,6 +136,8 @@ body,main{
 .sub_category_box{
     display: flex;
     gap: 75px;
+    width: 1441px;
+    margin: 0 auto;
 }
 .sub_category_title .fa-solid{
     padding-left: 10px;
@@ -602,22 +624,28 @@ body,main{
     background: url(../img/index/mainbg_3.jpg) no-repeat;
     background-size: cover
 }
-.led_ct{
-    z-index: 3;
-}
-.led_ct .bg{
-    background: url(../img/index/background_bg01.png);
-    background-size: cover;
 
+.led_ct {
+    position:absolute;
+    left: -500px;
+    z-index:5;
+    transition: 0.5s;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.led_ct > .bg{
+    background: url(../img/index/background_bg.png);
+    /* background-size: cover; */
     width: 100%;
     height: 100%;
 }
 .led_ct .led_text{
     color: #fff;
-    position: absolute;
+    /* position: absolute;
     top: 50%;  
     margin-left: 11%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
 }
 .led_ct .led_text > h2{
     font-size: 55px;
@@ -648,8 +676,6 @@ body,main{
 .led_ct .led_text > a > i {
     padding-left:10px;
 }
-
-
 
 /* SECTION04 - BESPOKE */
 
@@ -783,22 +809,29 @@ body,main{
 
 .bespoke_ct{
     z-index: 20;
+    position:absolute;
+    left: -700px;
+    z-index:5;
+    transition: 0.5s;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 11%;
 }
 .bespoke_ct .bg{
     background: url(../img/index/background_bg01.png);
-    background-size: cover;
+    /* background-size: cover;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0; */
 }
 .bespoke_ct .bespoke_text{
     color: #fff;
-    position: absolute;
+    /* position: absolute;
     top: 50%;  
     margin-left: 11%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
 }
 .bespoke_ct .bespoke_text > h2{
     font-size: 55px;
