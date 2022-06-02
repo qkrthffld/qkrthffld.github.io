@@ -8,10 +8,6 @@
 
 
 
-
-
-
-
   
   $('#fullpage').fullpage({
     //options here
