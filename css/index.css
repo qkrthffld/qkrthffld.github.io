@@ -36,6 +36,9 @@ body,main{
     height: 105px;
     align-items: center;
 }
+.header_inner a:hover .sub_category_wrap{
+    display:block;
+}
 .header .logo{
     /* position: absolute;
     top: 50%;
@@ -62,6 +65,7 @@ body,main{
     font-size: 18px;
     font-weight: bold;
     color: #fff;
+    height: 105px;
 }
 .header .blank_link > a{
     color: #fff;
@@ -225,7 +229,8 @@ body,main{
     font-size: 55px;
     font-weight: bold;
     padding-top: 29px;
-    padding-bottom: 96px;
+    padding-bottom: 60px;
+    line-height: 59px;
 }
 .main_slide .content > p{
     font-size: 20px;
@@ -287,6 +292,14 @@ body,main{
     display: flex;
     align-items: center;
 }
+.barcg .main_slide .slide_paging .slide_progressbar {
+    left: 240px;
+    bottom:149px;
+    /* width: calc(100% - 1254px); */
+    width: 282px;
+    height: 2px;
+    background-color: #202020;
+}
 .main_slide .slide_paging .slide_progressbar{
     left: 240px;
     bottom:149px;
@@ -295,14 +308,7 @@ body,main{
     height: 2px;
     background-color: rgba(255, 255, 255, 0.2);
 }
-.main_slide .slide_paging .slide_progressbar .barcg{
-    left: 240px;
-    bottom:149px;
-    /* width: calc(100% - 1254px); */
-    width: 282px;
-    height: 2px;
-    background-color: #202020;
-}
+
 .main_slide .slide_paging .slide_progressbar .fill{
     position: absolute;
     left: 0;
@@ -613,39 +619,40 @@ body,main{
     background: url(../img/index/mainbg_1.jpg) no-repeat;
     background-size: cover;
     z-index: 2;
+    transition: 0.8s;
     
 }
 .led_imgs .img_md{
     background: url(../img/index/mainbg_2.jpg) no-repeat;
     background-size: cover;
     z-index: 1;
+    transition: 0.8s;
 }
 .led_imgs .img_sm{
     background: url(../img/index/mainbg_3.jpg) no-repeat;
-    background-size: cover
+    background-size: cover;
+    transition: 0.8s;
 }
 
 .led_ct {
     position:absolute;
-    left: -500px;
-    z-index:5;
-    transition: 0.5s;
-    top: 50%;
-    transform: translateY(-50%);
+    left: -700px;
+    width: 100%;
+    top: 0;
+    transition: 0.5s;   
 }
-
 .led_ct > .bg{
     background: url(../img/index/background_bg.png);
-    /* background-size: cover; */
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-size: cover;
 }
 .led_ct .led_text{
     color: #fff;
-    /* position: absolute;
-    top: 50%;  
+    position: absolute;
+    width: 100vh;
     margin-left: 11%;
-    transform: translateY(-50%); */
+    top: 50%;
+    transform: translateY(-50%);
 }
 .led_ct .led_text > h2{
     font-size: 55px;
@@ -813,25 +820,20 @@ body,main{
     left: -700px;
     z-index:5;
     transition: 0.5s;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 11%;
+    width: 100%;   
 }
 .bespoke_ct .bg{
     background: url(../img/index/background_bg01.png);
-    /* background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; */
+    height: 100vh;
+    background-size: cover;
 }
 .bespoke_ct .bespoke_text{
     color: #fff;
-    /* position: absolute;
-    top: 50%;  
+    position: absolute;
+    width: 100vh;
     margin-left: 11%;
-    transform: translateY(-50%); */
+    top:50%;
+    transform: translateY(-50%);
 }
 .bespoke_ct .bespoke_text > h2{
     font-size: 55px;
@@ -974,7 +976,7 @@ body,main{
     width: 100%;
     height: 100%;
     top: 0; 
-    transition: 0.5s;
+    transition: 0.8s;
 }
 .all_content .collage{
     color: #fff;
@@ -1038,12 +1040,12 @@ body,main{
     margin: 0 auto;
     /* background: #458792; */
     padding-top: 107px;
-    padding-bottom: 28px;
+    /*padding-bottom: 28px;*/
 }
 .footer_content > ul{
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 55px;
     width: var(--con-width);
     margin: 0 auto;
 }
@@ -1062,7 +1064,7 @@ body,main{
     padding-left: 10px;
 }
 .footer_content .link li {
-    padding-top: 20px;
+    padding-top: 28px;
     /*line-height: 35px;*/
 }
 .footer_content .link li a{
@@ -1073,7 +1075,9 @@ body,main{
     border: 1px solid rgba(74,74,74,.1);
     margin: 50px 0;
 }
-
+h3.add_info {
+    padding-top: 61px;
+}
 
 /* footer_ct */
 
@@ -1234,6 +1238,9 @@ body,main{
 .info .if02 span:first-child:after{
     background: none;
 }
+.link{
+    padding-top: 20px;
+}
 
 
 .if03{
@@ -1266,4 +1273,13 @@ body,main{
 }
 .fp-overflow {
     overflow-y:overlay;
+}
+
+.footer_btt{
+    width: 1411px;
+    margin: 0 auto;
+    /* background: #458792; */
+    padding-bottom: 28px;  
+    position: relative;
+    top: -53px;
 }

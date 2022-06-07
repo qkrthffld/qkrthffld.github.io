@@ -5,6 +5,9 @@
       sliderIdx = $('.slide_container li').length,
       fullPageIdx = 0,
       scrollCnt = 0;
+      //navNum =0;
+      prograssbar= $('.slide_progressbar');
+
 
 
 
@@ -16,18 +19,20 @@
     scrollHorizontally: true,
     onLeave: function(origin, destination, direction, trigger){
         //console.log(origin.index,destination.index);
-      fullPageIdx = destination.index;    
+      fullPageIdx = destination.index; 
+       
       if(destination.index == 0){
-      
+        $('.fixed_wrap').css('background-color',''); 
         $('.header').removeClass('active light');
       } else if (destination.index == 1) {
-
-          $('.header').addClass('active light');
+        $('.fixed_wrap').css('background-color',''); 
+        $('.header').addClass('active light');
       } else if (destination.index == 2) {
-      
+        $('.fixed_wrap').css('background-color',''); 
       } else if (destination.index == 3) {
         $('.header').removeClass('active light');
-        
+        $('.fixed_wrap').css('background-color',''); 
+
         var data = false;
         $('.led_imgs li').removeClass();
         if (scrollCnt == 0) {
@@ -41,7 +46,7 @@
         } else if (scrollCnt == 2) {
           console.log('scrol22222');
           $('.led_imgs li').addClass('img_sm');
-          $('.led_ct').show().css('left', 11+'%');
+          $('.led_ct').show().css('left', 0);
           scrollCnt ++;
         } else {
           console.log('scroll3333');
@@ -53,7 +58,7 @@
         return data;
       } else if (destination.index == 4) {
         $('.header').addClass('active light');
-
+        $('.fixed_wrap').css('background-color',''); 
         var bespoke = false;
         $('.bespoke_ct').css('left', '-'+ 700 +'%'); 
         if (scrollCnt == 0) {
@@ -68,6 +73,7 @@
 
       } else if (destination.index == 5) {
         $('.header').addClass('active light');
+        $('.fixed_wrap').css('background-color','white');
          
       }
 	}
@@ -78,24 +84,22 @@
 
 
 $('.sub_category_wrap').hide();
-$('.touch_link > a').hover(
-  function(){
+$('.header_inner a').hover(
+  function(e){
+    e.preventDefault();
     $(this).parent().find('.sub_category_wrap').stop().slideDown(400);
     $('.header').addClass('light');
     $('.header_inner').css('background', '#fff');
   },
   function(){
-
     $(this).parent().find('.sub_category_wrap').stop().slideUp(400);
     $('.header_inner').css('background', '');
     if(!$('.header').hasClass('active')){
-      
-
       $('.header').removeClass('light');
     }
-
   }
 );
+
 
 
 
@@ -204,22 +208,28 @@ function moveSlide(num){
   $('.slide_container').css('left', vLeft);
   slideNum = num;
   $('.current').text(slideNum+1);
-
+  $('.header').removeClass('active light');
+  
+  
   if(slideNum > 0){
-    soundControls.css('visibility', 'hidden')
-    $('.auto_btn').css('visibility', 'hidden')
+    soundControls.css('visibility', 'hidden');
+    $('.auto_btn').css('visibility', 'hidden');
     //$('.slide_paging button .fa-solid').css('color', '#202020')
-    $('.colorcg').css('color', '#202020')
-    $('.total').addClass('changed')
-    $('.barcg').addClass('changed')
+    $('.colorcg').css('color', '#202020');
+    $('.total').addClass('changed');
+    $('.header').addClass('active light');
+    
+    
 
   }else{
-    soundControls.css('visibility', '')
-    $('.auto_btn').css('visibility', '')
-    $('.colorcg').css('color', '')
-    $('.total').removeClass('changed')
+    soundControls.css('visibility', '');
+    $('.auto_btn').css('visibility', '');
+    $('.colorcg').css('color', '');
+    $('.total').removeClass('changed');
   }
+  
 }
+
 
 
 soundControls.click(function(){
@@ -285,6 +295,18 @@ $(function(){
   $(".color_btn a").click(function(e){
       var index = $(this).index();
       $(".bespoke_img li").eq(index).show().siblings().hide();
+      if(index == 0){
+        $('.header').removeClass('active light');
+      }else if(index == 1){
+        $('.header').addClass('active light');
+        index++;
+      }else if(index == 2){
+        $('.header').addClass('active light');
+      }else if(index == 3){
+        $('.header').removeClass('active light');
+      }else if(index == 4){
+        $('.header').addClass('active light');
+      }
   });
 });
 
@@ -294,3 +316,5 @@ $(function(){
 
   //fp-auto-height : footer 부분의 영역에 마지막 컨테츠 높이만큼만 쓸수 있도록
   //https://github.com/alvarotrigo/fullPage.js/tree/master/lang/korean#%EA%B5%AC%EC%97%AD%EC%9D%84-%EB%8D%94-%EC%9E%91%EA%B2%8C-%EB%98%90%EB%8A%94-%ED%81%AC%EA%B2%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
+
