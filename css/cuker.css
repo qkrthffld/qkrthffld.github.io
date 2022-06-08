@@ -12,12 +12,13 @@ body {
 /* main */
 .cukerimg{
     background: url(../img/cuker/main_cuker.JPG)no-repeat;
-    background-size: 100%;
-    height: 100vh;
+    background-size: cover;
     position: relative;
+    padding-top:42%;
 }
 .cukerimg .main_text{
     position: absolute;
+    top:30%;
 }
 .cukerimg .main_text h2{
     font-size: 30px;
