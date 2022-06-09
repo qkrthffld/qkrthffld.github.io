@@ -100,12 +100,13 @@ $('.header_inner a').hover(
 );
 */
 $('.sub_category_wrap').hide();
-$('.header_inner a').mouseover(function(){  
+$('.touch_link > a').mouseover(function(){  
+  $('.sub_category_wrap').hide();
   $(this).parent().find('.sub_category_wrap').stop().slideDown(200);
   $('.header').addClass('light');
   $('.header_inner').css('background', '#fff');
 });
-$('.sub_category_wrap').mouseout(function(){
+$('.sub_category_wrap').mouseleave(function(){
   $(this).stop().slideUp(200);
   $('.header_inner').css('background', '');
   if(!$('.header').hasClass('active')){
