@@ -82,7 +82,7 @@
 
 /* HEADER - SUB NAVIGATION  */
 
-
+/*
 $('.sub_category_wrap').hide();
 $('.header_inner a').hover(
    function(){
@@ -98,22 +98,21 @@ $('.header_inner a').hover(
      }
    }
 );
+*/
+$('.sub_category_wrap').hide();
+$('.header_inner a').mouseover(function(){  
+  $(this).parent().find('.sub_category_wrap').stop().slideDown(200);
+  $('.header').addClass('light');
+  $('.header_inner').css('background', '#fff');
+});
+$('.sub_category_wrap').mouseout(function(){
+  $(this).stop().slideUp(200);
+  $('.header_inner').css('background', '');
+  if(!$('.header').hasClass('active')){
+    $('.header').removeClass('light');
+  }
+});
 
-
-// $('.sub_category_wrap').hide();
-// $('.header_inner a').mouseover(function(){ 
-//   $(this).parent().find('.sub_category_wrap').stop().slideDown(200);
-//   $('.header').addClass('light');
-//   $('.header_inner').css('background', '#fff');
-//   $(this).parent().find('.sub_category_wrap').addClass('useSubMenu');
-// });
-
-// $('.header_inner a').mouseout(function(){ 
-//   $(this).parent().find('.sub_category_wrap').stop().slideDown(200);
-//   $('.header').addClass('light');
-//   $('.header_inner').css('background', '#fff');
-//   $(this).parent().find('.sub_category_wrap').addClass('useSubMenu');
-// });
 
 // $('.sub_category_wrap').mouseout(function(){
 //   console.log('1111:', $(this).hasClass('useSubMenu'));
@@ -375,4 +374,4 @@ $(function(){
   //fp-auto-height : footer 부분의 영역에 마지막 컨테츠 높이만큼만 쓸수 있도록
   //https://github.com/alvarotrigo/fullPage.js/tree/master/lang/korean#%EA%B5%AC%EC%97%AD%EC%9D%84-%EB%8D%94-%EC%9E%91%EA%B2%8C-%EB%98%90%EB%8A%94-%ED%81%AC%EA%B2%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0
 
-
+  
