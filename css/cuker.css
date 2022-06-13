@@ -186,7 +186,7 @@ body {
 }
 .cukerimg .main_text h1{
     font-size: 55px;
-    font-weight: 500;
+    font-weight: 700;
     padding-bottom: 70px;
 }
 .cukerimg .main_text p{
@@ -199,6 +199,9 @@ body {
 .menu{
     width: 100%;
     margin-top: 194px;
+    height: 596px;
+    overflow:hidden;
+    position:relative;
 }
 .menu_tt{
     text-align: center;
@@ -218,10 +221,33 @@ body {
 .menu_links {
     display: flex;
     gap: 24px;
-    overflow: hidden;
     padding-top:72px;
 }
 
+
+/* .menu_links > span .currentroll{
+    left: 0;
+    transition: left .5s ease-in-out, right .5s ease-in-out;
+}
+.menu_links > span.prevroll{
+    left: -600px;
+    transition: left .5s ease-in-out, right .5s ease-in-out;
+}
+.menu_links.reverse li.prevroll{
+    transition: none;
+}
+.menu_links > span .nextroll{
+    left: 600px;
+    display: block;
+    transition: none;
+}
+.menu_links.reverse li.nextroll{
+    transition: left .5s ease-in-out, right .5s ease-in-out;
+} */
+
+.menu_links span{
+    position: absolute;
+}
 .menu_links .dining a{
     background: url(../img/cuker/menu/dining.JPG) no-repeat;
     width: 342px;
@@ -403,6 +429,8 @@ body {
     color: #fff;
 }
 
+
+
 /* brand */
 .brand{
     margin-top: 194px;
@@ -522,6 +550,8 @@ body {
     text-align: center;
     line-height: 80px;
 }
+
+
 
 /* best menu */
 .best_text{
@@ -676,6 +706,8 @@ body {
 .best_ct .price a > i{
     padding-left:10px;
 }
+
+
 
 /* FOOTER */
 footer{

@@ -1,8 +1,41 @@
-let menuLinks = $('.menu_links').find('span');
-let menuLkLength = menuLinks.children().length;
+/* 자동 롤링 배너 */
+
+window.onload = function(){
+  let bannerLeft = 0;
+  let spanCnt = 0;
+  let last;
+  let first = 1;
+  let $last;
+  let $first; 
 
 
-// rollingId = setInterval(function() {r})
+  $('.menu_links > span').each(function(){
+    $(this).css('left', bannerLeft);
+      bannerLeft += $(this).width()+24;
+      $(this).attr('id', 'banner'+(++spanCnt));
+  });
+
+  if( spanCnt >= 10){
+      last = spanCnt;
+      setInterval(function(){
+        $('.menu_links > span').each(function(){
+          $(this).css('left', $(this).position().left-1);
+        });
+
+        $first = $('#banner'+ first);
+        $last = $('#banner'+ last);
+        if($first.position().left < -400){
+            $first.css('left', $last.position().left + $last.width()+24 );
+            first++;
+            last++;
+            if(last > spanCnt) {last = 1;}
+            if(first > spanCnt) {first = 1;}
+        }
+      }, 10);
+
+  }
+
+};
 
 
 
