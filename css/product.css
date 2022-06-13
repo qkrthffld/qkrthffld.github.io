@@ -154,9 +154,9 @@ body {
 }
 #main_bner .banner{
     background: url(../img/product/main_product.gif) no-repeat;
-    height: 360px;
+    height: 350px;
     background-size: 120%;
-    background-position: 0% 47%;
+    background-position: 0% 43%;
 }
 #main_bner .banner h2{
     font-size: 55px;
@@ -178,8 +178,15 @@ body {
 
 
 /* ASIDE */
+#pd_wrapper{
+    width: 1441px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 108px;
+    gap: 53px;
+}
 #aside .filter{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     display: flex;
     width: 320px;
@@ -191,6 +198,7 @@ body {
 #aside input[type="checkbox"] + label{
     position: relative;
     left: 27px;
+    font-size: 15px;
 }
 #aside input[type="checkbox"] + label:before {
     content: '';
@@ -274,7 +282,25 @@ body {
     padding-top: 10%;
     width: 270px;
     color: #4a4a4a;
+    font-size: 15px;
 }
+
+
+/* PRODUCT */
+.product_wrap > ul {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.product_wrap ul > .item_oven {
+    width: 340px;
+    height: 531px;
+    background: #f0f0f0;
+}
+
+
+
+
 
 
 
