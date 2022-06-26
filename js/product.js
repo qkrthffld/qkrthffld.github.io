@@ -28,3 +28,23 @@ $(window).scroll(function(e){
         fixed.removeClass('shadow');
     }
 });
+
+
+/* HEART BUTTON */
+
+$('.fa-heart').click(function(e){
+  e.preventDefault();
+    $(this).toggleClass('fa-solid');
+    $(this).css('color', '#ff4d4d');
+
+    if ($(this).hasClass('fa-solid') == false) {
+      $(this).css('color', '#000');
+    }
+});
+
+
+/* PRODUCT COLOR BUTTON */
+
+$('.color_btn button').click(function(idx){
+  $(this).addClass('active');
+});

@@ -287,17 +287,278 @@ body {
 
 
 /* PRODUCT */
-.product_wrap > ul {
+
+.product_wrap > ul{
     display: flex;
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
 }
-.product_wrap ul > .item_oven {
+.pd_list{
     width: 340px;
-    height: 531px;
+    height: 730px;
     background: #f0f0f0;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.pd_content{
+    width: 290px;   
+}
+.pd_content .icons{
+   display: flex;
+   padding-top: 26px;
+   padding-bottom: 10px;
+   gap: 10px;
+   justify-content: flex-end;
+}
+.pd_content .icons label{
+    position: absolute;
+    height: 25px;
+    font-size: 13px;
+    background: #3e89dd;
+    border-radius: 13px;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    left: 25px;
+}
+.pd_content .icons .label_cost{
+    width: 84px;
+}
+.pd_content .icons .label_pp{
+    width: 66px;  
+}
+.pd_center_wrap{
+    display: flex;
+    flex-direction: column;
+}
+.pd_center_wrap .pd_images{
+    margin-bottom: 86%;
+    /* position: relative; */
+    transform: translate(3px, 16px);
+}
+.pd_center_wrap .pd_images > a {
+    display: inline-block;
+    width: 290px;
+    padding-top: 219px;
+    background-size: 94%;
+    position: absolute;
+    background-position: 8px -1px;
+}
+.pd_center_wrap .pd_img_green{
+    background: url(../img/product/01_green.png)no-repeat;
+}
+.pd_center_wrap .pd_img_yellow{
+    background: url(../img/product/02_yellow.png)no-repeat;
+}
+.pd_center_wrap .pd_img_blue{
+    background: url(../img/product/04_blue.png)no-repeat;
+}
+.pd_center_wrap .pd_img_black{
+    background: url(../img/product/03_black.png)no-repeat;
+}
+.color_btn{
+    display: flex;
+    gap: 13px;
+    padding-bottom: 39px;
+    padding-top: 25px;
+    margin: 0 auto;
+}
+.color_btn > button{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+}
+.color_btn > .btn_green{
+    background-color: #365144;    
+}
+.color_btn > .btn_green .active{
+    outline: 4px solid #9ca8a2;
+}
+.color_btn > .btn_yellow{
+    background-color: #fbc773;    
+}
+.color_btn > .btn_yellow .active{
+    outline: 4px solid #f5deb8;
+}
+.color_btn > .btn_blue{
+    background-color: #9bbedc;    
+}
+.color_btn > .btn_blue .active{
+    outline: 4px solid #cad9e7;
+}
+.color_btn > .btn_black{
+    background-color: #3d3935;    
+}
+.color_btn > .btn_black .active{
+    outline: 4px solid #9f9d9c;
+}
+.pd_text{
+    text-align: center;
+}
+.pd_text h2{
+    font-size: 19px;
+    color: #202020;
+    font-weight: bold;
+    padding-bottom: 21px;
+    line-height: 22px;
+}
+.pd_text h3{
+    font-size: 17px;
+    color: #4a4a4a;
+    padding-bottom: 49px;
+}
+.pd_text .label_height{
+    font-size: 17px;
+    color: #4a4a4a;
+    padding-bottom: 29px;
+}
+.pd_text .price{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3e89dd;
+    padding-bottom: 40px;
+}
+.pd_text .buy_btn{
+    width: 148px;
+    height: 38px;
+    border: 1px solid #202020;
+    border-radius: 40px;
+    padding: 10px 35px;
+}
+.pd_text .buy_btn:hover{
+    border: 1px solid #3e89dd;
+    background: #3e89dd;
+    color: #fff;
+
+}
+.pd_text .buy_btn i{
+    padding-left: 10px;
+}
+.pd_list > p{
+    font-size: 14px;
+    color: #4a4a4a;
+    border-top: 1px solid #dcdcdc;
+    top: 617px;
+    right: 0;
+    left: 0;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 24px;
+    position: absolute;
 }
 
+
+/* PD LIST 2 */
+.pd_center_wrap .oven_pink{
+    background: url(../img/product/05_pink.png)no-repeat;
+}
+.pd_center_wrap .oven_blue{
+    background: url(../img/product/06_blue.png)no-repeat;
+}
+.color_btn > .btn_oven_pink{
+    background-color: #c88266;    
+}
+.color_btn > .btn_oven_pink .active{
+    outline: 4px solid #debeb2;
+}
+.color_btn > .btn_oven_blue{
+    background-color: #bdcbcb;    
+}
+.color_btn > .btn_oven_blue .active{
+    outline: 4px solid #d9dfdf;
+}
+
+/* PD LIST 3 */
+.pd_center_wrap > .micro_img{
+    transform: translate(3px, 44px);
+}
+.pd_center_wrap .micro_white{
+    background: url(../img/product/08_white.png)no-repeat;
+}
+.pd_center_wrap .micro_black{
+    background: url(../img/product/07_black.png)no-repeat;
+}
+.color_btn > .btn_micro_white{
+    background-color: #58514b;    
+}
+.color_btn > .btn_micro_white .active{
+    outline: 4px solid #aba8a6;
+}
+.color_btn > .btn_micro_black{
+    background-color: #d9d9d6;    
+}
+.color_btn > .btn_micro_black .active{
+    outline: 4px solid #e6e6e4;
+}
+
+
+/* PD LIST 4 */
+.pd_center_wrap > .Infinite_img{
+    transform: translate(3px, 16px);
+}
+.pd_center_wrap .oven_Infinite_beige{
+    background: url(../img/product/09_beige.png)no-repeat;
+}
+.color_btn > .btn_Infinite_beige{
+    background-color: #ccc6bb;    
+}
+.color_btn > .btn_Infinite_beige .active{
+    outline: 4px solid #e0ddd8;
+}
+
+
+/* PD LIST 5 */
+.pd_center_wrap > .Infinite_black_img{
+    transform: translate(3px, 5px);
+}
+.pd_center_wrap .oven_Infinite_black{
+    background: url(../img/product/11_black.png)no-repeat;
+}
+.color_btn > .btn_Infinite_black{
+    background-color: #58514b;    
+}
+.color_btn > .btn_Infinite_black .active{
+    outline: 4px solid #aba8a6;
+}
+
+
+/* PD LIST 6 */
+.pd_center_wrap > .cuker_img{
+    transform: translate(3px, 26px);
+}
+.pd_center_wrap .cuker_yellow{
+    background: url(../img/product/12_yellow.png)no-repeat;
+}
+.pd_center_wrap .cuker_pink{
+    background: url(../img/product/13_pink.png)no-repeat;
+}
+.pd_center_wrap .cuker_beige{
+    background: url(../img/product/14_beige.png)no-repeat;
+}
+.color_btn > .btn_cuker_yellow{
+    background-color: #fbc773;    
+}
+.color_btn > .btn_cuker_yellow .active{
+    outline: 4px solid #f5deb8;
+}
+.color_btn > .btn_cuker_pink{
+    background-color: #f1bcca;    
+}
+.color_btn > .btn_cuker_pink .active{
+    outline: 4px solid #f0d9df;
+}
+.color_btn > .btn_cuker_beige{
+    background-color: #c5beb6;    
+}
+.color_btn > .btn_cuker_beige .active{
+    outline: 4px solid #ddd9d6;
+}
 
 
 
@@ -349,6 +610,9 @@ footer{
 h3.add_info {
     padding-top: 61px;
 }
+
+
+
 
 /* footer_ct */
 
