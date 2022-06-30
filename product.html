@@ -9,10 +9,12 @@
     <meta name="robots" content="all">
     <title>오븐 / 전자레인지</title>
 
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     
 
 
@@ -22,7 +24,7 @@
         <div class="fixed_wrap">
             <div class="header_inner">
                 <h1 class="logo">
-                    <a href="" class="logo_img"></a>
+                    <a href="index.html" class="logo_img"></a>
                 </h1>
                 <nav class="pc_nav">
                     <ul class="menu_list_wrap menu_text">
@@ -393,8 +395,8 @@
     </section>
 
     <section id="pd_wrapper">
-        <section id="aside">
-            <ul>
+        <section id="accordion">
+            <ul id="aside">
                 <li>
                     <a href="" class="filter">삼성닷컴 추천 모델
                         <i class="fa-solid fa-minus"></i>
@@ -402,7 +404,7 @@
                     </a>
                     <div>
                         <ul>
-                            <li>
+                            <li class="ck_list">
                                 <input type="checkbox" id="item_list">
                                 <label for="item_list">추천 모델</label>
                             </li>
@@ -412,7 +414,7 @@
 
                 <li>
                     <a href="" class="filter">유형
-                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
                         <!-- <span class="blind_btn"></span> -->
                     </a>
                     <div>
@@ -439,7 +441,7 @@
 
                 <li>
                     <a href="" class="filter">용량
-                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
                         <!-- <span class="blind_btn"></span> -->
                     </a>
                     <div>
@@ -474,7 +476,7 @@
 
                 <li>
                     <a href="" class="filter rang_filter">가격대
-                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
                         <!-- <span class="blind_btn"></span> -->
                     </a>
                     <div class="list_box price">
@@ -482,13 +484,14 @@
                         <div class="slider_wrapper">
                             <div class="slider_rang_pf">
                                 <div class="slider_rang_control"></div>
-                                <span class=""></span>
-                                <span class="btn_right"></span>
+                                <span></span>
                             </div>
                         </div>
+                       
                         <div class="range_price">
                             <span class="min-range">11만원</span>
-                            <span class="max-range">94만원</span>
+                            <label for="max-range"></label>
+                            <input type="text" id="max-range" value="94만원">
                         </div>
                     </div>
                     </div>
@@ -513,7 +516,7 @@
                                     <a href="" class="pd_img_black"></a>
                                 </div>
                                 <div class="color_btn">
-                                    <button type="button" class="btn_green"></button>
+                                    <button type="button" class="btn_green active"></button>
                                     <button type="button" class="btn_yellow"></button>
                                     <button type="button" class="btn_blue"></button>
                                     <button type="button" class="btn_black"></button>
@@ -547,7 +550,7 @@
                                     <a href="" class="oven_blue"></a>
                                 </div>
                                 <div class="color_btn">
-                                    <button type="button" class="btn_oven_pink"></button>
+                                    <button type="button" class="btn_oven_pink active"></button>
                                     <button type="button" class="btn_oven_blue"></button>
                                 </div>
                                 <div class="pd_text">
@@ -580,8 +583,8 @@
                                     <a href="" class="micro_black"></a>
                                 </div>
                                 <div class="color_btn">
-                                    <button type="button" class="btn_micro_white"></button>
-                                    <button type="button" class="btn_micro_black"></button>
+                                    <button type="button" class="btn_micro_white active"></button>
+                                    <button type="button" class="btn_micro_black "></button>
                                 </div>
                                 <div class="pd_text">
                                     <h2>BESPOKE 전자레인지 23L<br/>(그릴 프라이)</h2>
@@ -611,7 +614,7 @@
                                     <a href="" class="oven_Infinite_beige"></a>
                                 </div>
                                 <div class="color_btn">
-                                    <button type="button" class="btn_Infinite_beige"></button>
+                                    <button type="button" class="btn_Infinite_beige active"></button>
                                 </div>
                                 <div class="pd_text">
                                     <h2>BESPOKE 오븐 Infinite Line 50L</h2>
@@ -641,7 +644,7 @@
                                     <a href="" class="oven_Infinite_black"></a>
                                 </div>
                                 <div class="color_btn">
-                                    <button type="button" class="btn_Infinite_black"></button>
+                                    <button type="button" class="btn_Infinite_black active"></button>
                                 </div>
                                 <div class="pd_text">
                                     <h2>BESPOKE 오븐 Infinite Line 50L</h2>
@@ -674,7 +677,7 @@
                                     <a href="" class="cuker_beige"></a>
                                 </div>
                                 <div class="color_btn">
-                                    <button type="button" class="btn_cuker_yellow"></button>
+                                    <button type="button" class="btn_cuker_yellow active"></button>
                                     <button type="button" class="btn_cuker_pink"></button>
                                     <button type="button" class="btn_cuker_beige"></button>
                                 </div>
@@ -695,187 +698,7 @@
                             - 마그네톤으로 열을 받아 바닥까지 바삭하게 요리 
                         </p>
                     </li>
-                    <!-- <li class="item_oven oven_one">
-                        <div class="icons">
-                            <a href=""><i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-cart-arrow-down"></i></a>
-                        </div>
-                        <div class="pd_img">
-                            <a href="" class="img_pd_yellow"></a>
-                            <a href="" class="img_pd_green"></a>
-                            <a href="" class="img_pd_blue"></a>
-                            <a href="" class="img_pd_black"></a>
-                        </div>
-                        <div class="color_wrap">
-                            <ul class="color_btn">
-                                <li class="yellow"></li>
-                                <li class="green"></li>
-                                <li class="blue"></li>
-                                <li class="black"></li>
-                            </ul>
-                        </div>
-                        <div class="pd_text">
-                            <h3>BESPOKE 직화오븐 35L</h3>
-                            <P>MC35A8599LV</P>
-                            <div class="price">
-                                <p>혜택가</p>
-                                <p>760,000원</p>
-                            </div>
-                            <div class="buy_btn"><a href="">구매하러가기<i class="fa-solid fa-angle-right"></i></a></div>
-                            <p>
-                                - 나에게 맞춘 키친테리어 BESPOKE 디자인<br/>
-                                - 겉은 바삭하고, 속은 촉촉하게 직화열풍<br/> 
-                                - 더 쉽고, 입맛에 딱 맞게 조리 가능한 맞춤요리 
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="item_oven oven_two">
-                        <div class="icons">
-                            <a href=""><i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-cart-arrow-down"></i></a>
-                        </div>
-                        <div class="pd_img"><a href=""></a></div>
-                        <div class="color_wrap">
-                            <ul class="color_btn">
-                                <li class="pink"></li>
-                                <li class="blue"></li>
-                            </ul>
-                        </div>
-                        <div class="pd_text">
-                            <h3>BESPOKE 오븐 35L</h3>
-                            <P>MC35A8899LM</P>
-                            <div class="price">
-                                <p>혜택가</p>
-                                <p>940,000원</p>
-                            </div>
-                            <div class="buy_btn"><a href="">구매하러가기<i class="fa-solid fa-angle-right"></i></a></div>
-                            <p>
-                                - 나에게 맞춘 키친테리어 BESPOKE 디자인<br/>
-                                - 오븐 속 조리상태를 보여주는 뷰카메라<br/>  
-                                - 더 쉽게 입맛에 딱 맞게 스마트쿡
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="item_oven micro">
-                        <div class="icons">
-                            <span>가성비 제품</span>
-                            <ul>
-                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
-                                <li><a href=""><i class="fa-solid fa-cart-arrow-down"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="pd_img"><a href=""></a></div>
-                        <div class="color_wrap">
-                            <ul class="color_btn">
-                                <li class="brown"></li>
-                                <li class="white"></li>
-                            </ul>
-                        </div>
-                        <div class="pd_text">
-                            <h3>BESPOKE 전자레인지 23L<br/>(그릴 프라이)</h3>
-                            <P>MG23T5018CE</P>
-                            <div class="price">
-                                <p>혜택가</p>
-                                <p>243,000원</p>
-                            </div>
-                            <div class="buy_btn"><a href="">구매하러가기<i class="fa-solid fa-angle-right"></i></a></div>
-                            <p>
-                                - 그릴로 바삭하게 전자레인지로 빠르게 복합조리<br/>
-                                - 빵 해동 홈디저트도 간편하게 노오븐 베이킹<br/> 
-                                - 다양한 컬러 세련된 글라스 감성 디자인
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="item_oven oven_infinite_w">
-                        <div class="icons">
-                            <a href=""><i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-cart-arrow-down"></i></a>
-                        </div>
-                        <div class="pd_img"><a href=""></a></div>
-                        <div class="color_wrap">
-                            <ul class="color_btn">
-                                <li class="white"></li>
-                            </ul>
-                        </div>
-                        <div class="pd_text">
-                            <h3>BESPOKE 오븐 Infinite Line 50L</h3>
-                            <P>NQ50T9539BE</P>
-                            <div class="price">
-                                <p>혜택가</p>
-                                <p>2,290,000원</p>
-                            </div>
-                            <div class="buy_btn"><a href="">구매하러가기<i class="fa-solid fa-angle-right"></i></a></div>
-                            <p>
-                                - 상/하단 동시 조리 가능한 듀얼 쿡<br/>
-                                - 겉은 바삭하고, 속은 촉촉! 고메 베이퍼<br/>
-                                - 복잡한 양식 요리도 간편한 자동조리
-                            </p>
-                        </div>
-                    </li>
-                    
-                    <li class="item_oven oven_infinite_b">
-                        <div class="icons">
-                            <a href=""><i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-cart-arrow-down"></i></a>
-                        </div>
-                        <div class="pd_img"><a href=""></a></div>
-                        <div class="color_wrap">
-                            <ul class="color_btn">
-                                <li class="white"></li>
-                            </ul>
-                        </div>
-                        <div class="pd_text">
-                            <h3>BESPOKE 오븐 Infinite Line 75L</h3>
-                            <P>NV75T9879CD</P>
-                            <div class="price">
-                                <p>혜택가</p>
-                                <p>2,490,000원</p>
-                            </div>
-                            <div class="buy_btn"><a href="">구매하러가기<i class="fa-solid fa-angle-right"></i></a></div>
-                            <p>
-                                - 상/하단 동시 조리 가능한 듀얼 쿡<br/>
-                                - 겉은 바삭하고, 속은 촉촉! 고메 베이퍼<br/>
-                                - 복잡한 양식 요리도 간편한 자동조리
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="item_oven cuker">
-                        <div class="icons">
-                            <span>인기 제품</span>
-                            <ul>
-                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
-                                <li><a href=""><i class="fa-solid fa-cart-arrow-down"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="pd_img"><a href=""></a></div>
-                        <div class="color_wrap">
-                            <ul class="color_btn">
-                                <li class="yellow"></li>
-                                <li class="pink"></li>
-                                <li class="beige"></li>
-                            </ul>
-                        </div>
-                        <div class="pd_text">
-                            <h3>BESPOKE 큐커 22L</h3>
-                            <P>MO22A7797CV</P>
-                            <div class="price">
-                                <p>혜택가</p>
-                                <p>590,000원</p>
-                            </div>
-                            <div class="buy_btn"><a href="">구매하러가기<i class="fa-solid fa-angle-right"></i></a></div>
-                            <p>
-                                - 상단 4개 그릴과 그릴플레이트로 동시에 멀티쿡<br/> 
-                                - 대화형 알림창으로 간편한기능가능<br/>    
-                                - 마그네톤으로 열을 받아 바닥까지 바삭하게 요리
-                            </p>
-                        </div>
-                    </li> -->
                 </ul>
-
             </div>
         </section>
     </section>  
@@ -1060,15 +883,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-82NZ10G0DJ"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-82NZ10G0DJ');
-    </script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="js/product.js"></script>
 </body>
 </html>

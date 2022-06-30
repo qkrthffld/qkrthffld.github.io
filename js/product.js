@@ -44,7 +44,83 @@ $('.fa-heart').click(function(e){
 
 
 /* PRODUCT COLOR BUTTON */
-
-$('.color_btn button').click(function(idx){
-  $(this).addClass('active');
+/*
+$('.color_btn button').click(function(){
+  $(this).each(function(){
+    $(this).addClass('active');
+    console.log('active');
+  });
 });
+*/
+
+//$(".pd_images a:eq(0)").nextAll().hide();
+  $(".color_btn button").click(function(e){
+    var index = $(this).index();
+
+    // 선택자 형제들만 remove
+    $(this).siblings().removeClass('active');
+    
+    // 선택자만 add
+    $(this).addClass('active');  
+    $(this).parents().prev().children().eq(index).show().siblings().hide();
+    //$(".pd_images a").eq(index).show().siblings().hide();
+
+      //$('.color_btn a').removeClass('black_btn_border gold_btn_border warm_btn_border brown_btn_border gray_btn_border');
+  });
+
+
+
+
+  /* ACCORDION */
+  
+  
+  $( "#aside" ).accordion({
+    collapsible: true,
+    heightStyle: "content",
+    active: false
+  });
+  
+
+
+
+   $('.fa-solid').click(function(){
+     //e.preventDefault();
+     
+     if ($(this).hasClass('fa-plus')) {
+       $(this).removeClass('fa-plus');
+       $(this).addClass('fa-minus');
+     } else {
+       $(this).removeClass('fa-minus');
+       $(this).addClass('fa-plus');
+     }
+ 
+   });
+
+
+  /* PRICE SLIDER */
+
+
+  // let blueRang= $('.range_box .slider_rang_control')
+   $( function() {
+    $( ".slider_rang_control" ).slider({
+      range: "min",
+      value: 94,
+      min: 11,
+      max: 94,
+      slide: function( event, ui ) {
+        $( "#max-range").val(ui.value + "만원" );
+        $(this).slider().val(ui.value[1]);
+        
+      },
+
+    });
+    $( ".range_price" ).val($("#max-range" ).slider( "value" ) + "만원" );
+  } );
+ 
+
+ 
+ 
+
+
+
+ 
