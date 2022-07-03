@@ -7,6 +7,9 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     color: #202020;
 }
+.hidden_title{
+    display: none;
+}
 
 
 /* NAVIGATION */
@@ -48,6 +51,7 @@ body {
     height: 100%;
     background-size: 100%;
     z-index: 703px;
+    text-indent: -9999em;
 }
 .header .menu_blank_wrap {
     display: flex;
@@ -199,10 +203,31 @@ body {
     position: absolute;
     right: 0;
 } */
-#accordion .fa-plus, .fa-minus {
+
+#accordion .plus {
     position: absolute;
     right: 0;
 }
+
+/* .filter .plus > .fa-minus{
+    display: none;
+}
+.filter .plus > .fa-plus{
+    display: none;
+} */
+
+
+/* .filte .plus > .fa-plus{
+    display: none;
+}
+.filte .plus:checked .fa-plus{
+    display: block;
+} */
+
+/* .filter .plus > .fa-minus{
+    display: block;
+} */
+
 
 #accordion [type="checkbox"] {
    display: none;
@@ -268,12 +293,16 @@ body {
     border-radius: 1px;
     background: #d9d9d9;  
 }
-.range_box .slider_rang_control {
+/* .range_box .slider_rang_control {
     position: relative;
     height: 3px;
     border-radius: 0;
     background: #3e89dd;
     width: 100%;
+} */
+.ui-slider-range{
+    height: 3px;
+    background: #3e89dd;
 }
 .range_box .slider_rang_pf span{
     top: 50%;
@@ -306,6 +335,7 @@ body {
     left: 86%;
     color: #4a4a4a;
 }
+
 
 
 /* PRODUCT */
@@ -677,6 +707,18 @@ h3.add_info {
     background: none;
 }
 #use_ct{
+    min-height: 44px;
+    width: 290px;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    box-sizing: border-box;
+    background-color: var(--white);
+    text-align: left;
+    cursor: pointer;
+    padding-left: 14px;
+    font-size: 17px; 
+}
+#use_ct1{
     min-height: 44px;
     width: 290px;
     border-radius: 10px;

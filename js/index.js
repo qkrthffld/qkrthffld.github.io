@@ -269,14 +269,15 @@ function moveSlide(num){
     $('.colorcg').css('color', '#202020');
     $('.total').addClass('changed');
     $('.header').addClass('active light');
-    
-    
+    $('.slide_progressbar').css('background-color', '#202020');
 
   }else{
     soundControls.css('visibility', '');
     $('.auto_btn').css('visibility', '');
     $('.colorcg').css('color', '');
     $('.total').removeClass('changed');
+    $('.slide_progressbar').css('background-color', '');
+  
   }
   
 }

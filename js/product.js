@@ -81,26 +81,30 @@ $('.color_btn button').click(function(){
   });
   
 
-
-
-   $('.fa-solid').click(function(){
-     //e.preventDefault();
+  //  $('.fa-solid').click(function(){
+  //    //e.preventDefault();
      
-     if ($(this).hasClass('fa-plus')) {
-       $(this).removeClass('fa-plus');
-       $(this).addClass('fa-minus');
-     } else {
-       $(this).removeClass('fa-minus');
-       $(this).addClass('fa-plus');
-     }
+  //    if ($(this).hasClass('fa-plus')) {
+  //     $(this).removeClass('fa-plus');
+  //     $(this).addClass('fa-minus');
+  //     $(this).hasClass().siblings().addClass('fa-plus');
+  //      //$(this).removeClass('fa-plus');
+  //      //$(this).addClass('fa-minus');
+  //    } else {
+  //     $(this).removeClass('fa-minus');
+  //     $(this).addClass('fa-plus');
+  //     $(this).hasClass().siblings().addClass('fa-plus');
+  
+  //      //$(this).removeClass('fa-minus');
+  //      //$(this).addClass('fa-plus');
+  //    }
  
-   });
+  //  });
 
 
   /* PRICE SLIDER */
 
 
-  // let blueRang= $('.range_box .slider_rang_control')
    $( function() {
     $( ".slider_rang_control" ).slider({
       range: "min",
@@ -108,9 +112,7 @@ $('.color_btn button').click(function(){
       min: 11,
       max: 94,
       slide: function( event, ui ) {
-        $( "#max-range").val(ui.value + "만원" );
-        $(this).slider().val(ui.value[1]);
-        
+        $( "#max-range").val(ui.value + "만원" );  
       },
 
     });
