@@ -204,14 +204,16 @@ body {
     right: 0;
 } */
 
-#accordion .plus {
+#accordion .plus > i {
     position: absolute;
     right: 0;
 }
 
-/* .filter .plus > .fa-minus{
+.ui-state-active .fa-plus{
     display: none;
 }
+
+/* 
 .filter .plus > .fa-plus{
     display: none;
 } */

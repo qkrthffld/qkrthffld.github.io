@@ -246,15 +246,13 @@ body {
     transition: left .5s ease-in-out, right .5s ease-in-out;
 } */
 
-.menu_links span{
+.menu_links > div{
     position: absolute;
 }
-/* .menu_links > a > span{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.menu_links span{
     display: block;
-} */
+
+}
 
 .menu_links .dining a{
     background: url(../img/cuker/menu/dining.JPG) no-repeat;
@@ -273,7 +271,6 @@ body {
     padding-top: 280px;
     text-shadow: 4px 2px 3px rgba(0,0,0,.2);
     color: #fff;
-   
 }
 .menu_links .kor a{
     background: url(../img/cuker/menu/korea.jpg) no-repeat;

@@ -232,8 +232,7 @@ $('.header .header_inner').hover(
 
 /* SECTION01 - MAIN */
 
-
-  
+ 
 // slide prev버튼
 btnPrev.click(function() {
   if(slideNum != 0){
@@ -246,21 +245,24 @@ btnPrev.click(function() {
 // slide after버튼
 btnAfter.click(function() {
   if(slideNum != sliderIdx -1){
-      moveSlide(slideNum+1);
+      moveSlide(slideNum+1); 
+      
   }else{
-      moveSlide(0);
+    moveSlide(0);
   }
+  
 });
 
 
 //슬라이드 이동 함수
 function moveSlide(num){
-  var vLeft = num*-100+'%';
+  let newleft = num*33.3+'%';
+  let vLeft = num*-100+'%';
   $('.slide_container').css('left', vLeft);
   slideNum = num;
   $('.current').text(slideNum+1);
   $('.header').removeClass('active light');
-  
+
   
   if(slideNum > 0){
     soundControls.css('visibility', 'hidden');
@@ -269,15 +271,19 @@ function moveSlide(num){
     $('.colorcg').css('color', '#202020');
     $('.total').addClass('changed');
     $('.header').addClass('active light');
-    $('.slide_progressbar').css('background-color', '#202020');
-
+    $('.slide_progressbar').css('background-color', 'rgba(0, 0, 0, 0.4)');
+    //$('.slide_progressbar .fill').css('background-color', 'red');
+    $('.slide_progressbar .fill').css('left' , newleft);
+    $('.slide_progressbar .fill').css('background-color', '#202020');
+   
   }else{
     soundControls.css('visibility', '');
     $('.auto_btn').css('visibility', '');
     $('.colorcg').css('color', '');
     $('.total').removeClass('changed');
     $('.slide_progressbar').css('background-color', '');
-  
+    $('.slide_progressbar .fill').css('left', '');
+    $('.slide_progressbar .fill').css('background-color', '');
   }
   
 }
@@ -307,9 +313,6 @@ function playBtn() {
       //player.currentTime = 0
   }
 }
-
-
-
 
 
 
@@ -377,3 +380,120 @@ $(function(){
   //https://github.com/alvarotrigo/fullPage.js/tree/master/lang/korean#%EA%B5%AC%EC%97%AD%EC%9D%84-%EB%8D%94-%EC%9E%91%EA%B2%8C-%EB%98%90%EB%8A%94-%ED%81%AC%EA%B2%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0
 
   
+
+  /* COUNTDOWN */
+
+ 
+
+  CountDownTimer('01/01/2023', 'countdown');
+
+  function CountDownTimer(dt, id)
+  {
+      var end = new Date(dt);
+
+      var _second = 1000;
+      var _minute = _second * 60;
+      var _hour = _minute * 60;
+      var _day = _hour * 24;
+      var timer;
+
+      function showRemaining() {
+          var now = new Date();
+          var distance = end - now;
+          if (distance < 0) {
+
+              clearInterval(timer);
+              document.getElementById(id).innerHTML = 'EXPIRED!';
+
+              return;
+          }
+          var days = Math.floor(distance / _day);
+          var hours = Math.floor((distance % _day) / _hour);
+          var minutes = Math.floor((distance % _hour) / _minute);
+          var seconds = Math.floor((distance % _minute) / _second);
+
+          document.getElementById(id).innerHTML = days + '일 ';
+          document.getElementById(id).innerHTML += hours + '시간 ';
+          document.getElementById(id).innerHTML += minutes + '분 ';
+          document.getElementById(id).innerHTML += seconds + '초';
+      }
+
+      timer = setInterval(showRemaining, 1000);
+  }
+
+
+  /* MODAL POPUP */
+  
+  // $('button').click(function(){
+  //   $('.modal_box').css('display','none');
+  // });
+
+
+  /* COOKIE */
+
+  let modalBox = document.querySelector('.modal_box');
+  let popupCheckBox = document.querySelector('#nomore');
+  let popupClose = popup.querySelector('#close');
+
+      //쿠키 생성 함수
+      function setCookie(name,value,day){
+          let date = new Date();
+          date.setDate(date.getDate() + day);
+
+          let cookieContent = '';
+          cookieContent += `${name}=${value};`;
+          cookieContent += `Expires=${date.toUTCString()}`;            
+
+          document.cookie = cookieContent;
+      }
+      /*
+      쿠키체크 
+          쿠키 있다면 - 팝업이 안보인다.
+          쿠키 없다면 - 팝업이 보인다.
+
+      닫기 버큰을 클릭하면 할일
+          하루안보기 체크안하고 닫으면 - 쿠키지운다.
+          체크하고 닫으면 - 쿠키생성
+      */
+
+
+      //쿠키 확인 함수
+      function getCookie(name){
+          let visited = false;
+          let cookies = document.cookie.split(';'); //문자열 ; 구분해서 배열 생성
+
+          for(let cookie of cookies){
+              if(cookie.indexOf(name) > -1){
+                  visited = true;
+              }
+          }
+          if(visited){
+            modalBox.style.display = 'none'; //재방문
+          }else{
+            modalBox.style.display = 'block'; //첫방문, 안보기 체크안하고 닫기,
+          }
+      }        
+      getCookie('ABC');
+
+      //쿠키 삭제 함수
+      function delCookie(name,value){           
+
+          let date = new Date();
+          date.setDate(date.getDate() - 1);
+
+          let cookieContent = '';
+          cookieContent += `${name}=${value};`;
+          cookieContent += `Expires=${date.toUTCString()}`;            
+
+          document.cookie = cookieContent;
+      }            
+
+
+      popupClose.addEventListener('click', ()=>{
+          modalBox.style.display = 'none';
+          if(popupCheckBox.checked){ //체크되었다면, 팝업을 다시 안보겠다, 쿠키생성
+              setCookie('ABC','Main Page',1);
+          }else{//체크x, 팝업을 다시 보겠다, 쿠키제거
+              delCookie('ABC','Main Page');
+          }
+      });

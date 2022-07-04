@@ -9,7 +9,7 @@ window.onload = function(){
   let $first; 
 
 
-  $('.menu_links > span').each(function(){
+  $('.menu_links > div').each(function(){
     $(this).css('left', bannerLeft);
       bannerLeft += $(this).width()+24;
       $(this).attr('id', 'banner'+(++spanCnt));
@@ -18,7 +18,7 @@ window.onload = function(){
   if( spanCnt >= 10){
       last = spanCnt;
       setInterval(function(){
-        $('.menu_links > span').each(function(){
+        $('.menu_links > div').each(function(){
           $(this).css('left', $(this).position().left-1);
         });
 
