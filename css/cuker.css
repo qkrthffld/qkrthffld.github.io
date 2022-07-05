@@ -127,6 +127,7 @@ body {
     padding-top: 52px;
     padding-bottom: 95px;
     padding-left: 60px;
+    box-shadow: 0px 4px 7px -2px rgb(74 74 74 / 19%);
     
     /* submenu 보기*/
     /* opacity: 0; */
@@ -765,12 +766,10 @@ h3.add_info {
 /* footer_ct */
 
 .footer_ct{
-    width: var(--con-width);
+    width: 1411px;
     margin: 0 auto;
     font-size: 16px;
     color: var(--sub-color);
-    width: var(--con-width);
-    margin: 0 auto;
 }
 .lang{
     display: flex;
@@ -964,7 +963,6 @@ h3.add_info {
 }
 
 .footer_btt{
-    width: 1411px;
     margin: 0 auto;
     /* background: #458792; */
     padding-bottom: 28px;  
