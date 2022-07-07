@@ -1260,8 +1260,7 @@ h3.add_info {
     gap: 30px;
     padding-left: 70px;
 }
-.lang .sns .fbook{
-    background: url(../img/icon/facebook.svg) no-repeat;
+.lang .sns .fbook img{
     width:22px;
     height: 41px; 
     display: block;
@@ -1269,24 +1268,21 @@ h3.add_info {
     fill: #202020;
     filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
 }
-.lang .sns .insta{
-    background: url(../img/icon/instagram.png) no-repeat;
+.lang .sns .insta img{
     width:40px;
     height: 41px;
     display: block;
     background-size: 100%;
     filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
 }
-.lang .sns .youtube{
-    background: url(../img/icon/youtube.png) no-repeat;
+.lang .sns .youtube img{
     width:50px;
     height: 48px;
     display: block;
     background-size: 100%;
     filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
 }
-.lang .sns .blog{
-    background: url(../img/icon/blog.png) no-repeat;
+.lang .sns .blog img{
     width:43px;
     height: 41px;
     display: block;
@@ -1307,17 +1303,21 @@ h3.add_info {
     font-weight: bold; 
     display: inline-block;
 }
+.info .text li > span{
+    font-weight: 500;
+}
 .info .if01, .if02 {
     display:flex;
     gap: 23px;
+    flex-wrap: wrap;
 }
-.info .if01 span {
+.info .if01 li {
     position: relative;
 }
-.info .if02 span {
+.info .if02 li {
     position: relative;
 }
-.info .if01 span:after{
+.info .if01 li:after{
     content: '';
     width: 1px;
     height: 15px;
@@ -1326,7 +1326,7 @@ h3.add_info {
     top: 9px;
     left: -12px;
 }
-.info .if01 span:first-child:after{
+.info .if01 li:first-child:after{
     background: none;
 }
 .info .if01 .info_links{
@@ -1339,7 +1339,7 @@ h3.add_info {
 .info_links{
     color: #fff;
 }
-.info .if02 span:after{
+.info .if02 li:after{
     content: '';
     width: 1px;
     height: 15px;
@@ -1348,7 +1348,7 @@ h3.add_info {
     top: 9px;
     left: -12px;
 }
-.info .if02 span:first-child:after{
+.info .if02 li:first-child:after{
     background: none;
 }
 .link{
@@ -1450,7 +1450,7 @@ h3.add_info {
     .all_content li{
         width: 365px;
     }
-    .planning_ct{
+    .all_content .collage{
         margin-left: 18px;
     }
     .planning{
@@ -1628,25 +1628,26 @@ h3.add_info {
 
     /* section5 - event */
     .all_content{
-        width: 1100px;
+        width: 1045px;
     }
     .all_content li{
-        width: 365px;
-    }
-    .planning_ct{
-        margin-left: 18px;
+        width: 340px;
+        height: 266px;
     }
     .planning{
-        background-size: 200%;
+        background-size: 205%;
     }
     .event{
-        background-size: 232%;
+        background-size: 247%;
+    }
+    .cuker{
+        background-size: 175%;
     }
     .membership{
-        background-size: 526%;
+        background-size: 560%;
     }
     .service{
-        background-size: 131%;
+        background-size: 135%;
     }
 
     /* footer */
