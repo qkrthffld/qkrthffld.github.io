@@ -1395,3 +1395,275 @@ h3.add_info {
     position: relative;
     top: -53px;
 }
+
+
+
+/* 반응형 */
+@media (max-width:1170px){
+    /* .header{
+        width: 1100px;
+        margin:0 auto;
+    } */
+    .menu_list {
+        font-size: 15px;
+    }
+    .pc_nav .menu_list_wrap{
+        gap: 18px;
+        padding-left: 16px;
+    }
+    .header .menu_blank_wrap{
+        gap: 13px;
+        padding-left: 24px;
+    }
+    .header .menu_icon_wrap{
+        padding-left: 54px;
+        gap: 10px;
+    }
+    .sub_category_box {
+        gap:50px;
+    }
+    .slide_container > li > .content{
+        padding-left: 53px;
+    }
+
+    /* section2 - galaxy */
+    .swiper_ct{
+        width: 1100px;
+        gap: 79px;
+    }
+    .swiper_slide{
+        gap: 33px;
+    }
+    .swiper_slide .tab{
+        width: 480px;
+    }
+
+    /* section4 - bespoke */
+    .color_btn{
+        left: 64%;
+    }
+
+    /* section5 - event */
+    .all_content{
+        width: 1100px;
+    }
+    .all_content li{
+        width: 365px;
+    }
+    .planning_ct{
+        margin-left: 18px;
+    }
+    .planning{
+        background-size: 200%;
+    }
+    .event{
+        background-size: 232%;
+    }
+    .membership{
+        background-size: 526%;
+    }
+    .service{
+        background-size: 131%;
+    }
+
+    /* footer */
+    .footer_content{
+        width: 1100px;
+    }
+    .footer_content ul > li > div > ul:last-child{
+        padding-left: 60px;
+    }
+    .footer_content > ul{
+        top: 53%;
+    }
+    .line{
+        margin: 50px 0 60px 0;
+    }
+    .footer_ct{
+        width: 1100px;
+    }
+    /* .acodian{
+        display: block;
+    } */
+    /* #use_ct, #use_ct1{
+        width: 270px;
+        padding-left: 9px;
+    }
+    .acodian{
+        gap: 9px;
+    }
+    .footer_ct .sns ul{
+        gap: 13px;
+    }
+    .footer_ct .sns ul{
+        padding-left: 46px;
+    }
+    .lang > ul > li:after{
+        display: none;
+    }
+    .lang .sns .fbook{
+        width: 16px;
+    }
+    .lang .sns .insta{
+        width: 34px;
+    }
+    .lang .sns .youtube{
+        width: 42px;
+    }
+    .lang .sns .blog{
+        width: 39px;
+    }
+    .dropList01{
+        padding-left: 11px;
+    }
+    .lang > ul {
+        gap: 10px;
+    } */
+    
+    
+    .lang{
+        position: relative;
+        display: block;
+    }
+    .sns {
+        position: absolute;
+        right: 0px;
+        top: -14px;
+    }
+    .footer_ct .sns ul {
+        padding-left: 0;
+        justify-content: flex-end;
+    }
+    .dropList01{
+        padding-left: 0;
+    }
+    .acodian{
+        padding-top: 37px;
+    }
+    .info .if02{
+        display: block;
+    }
+    .info .if02 span{
+        padding-right: 18px;
+    }
+    .info .if02 span:after{
+        top: 5px;
+        left: -10px;
+    }
+    /* .info .if02{
+        flex-wrap: wrap;
+    }
+    .info .if02 span{
+       display: block;
+    }
+    .info .if02 span:nth-child(4), span:nth-child(5){
+        top: -24px;
+        left: 10px;
+    }
+    .info .if02 span:after{
+        left: -10px;
+    } */
+ 
+}
+
+@media (max-width:1116px){
+
+    .menu_list {
+        font-size: 11px;
+    }
+    .main_slide .main_tt{
+        font-size: 45px;
+    }
+    .main_slide .content > p{
+        font-size: 18px;
+    }
+    #countdown{
+        font-size: 45px;
+    }
+    .main_slide .content .button{
+        width: 256px;
+        height: 65px;
+        line-height: 65px;
+    }
+    .sub_category_wrap{
+        padding-left: 29px; 
+    }
+    .sub_category_box {
+        gap:42px;
+    }
+    .slide_container > li > .content{
+        padding-left: 53px;
+    }
+    .main_slide .slide3{
+        background-size: 167%;
+        background-position: -283px;
+    }
+
+    /* section2 - galaxy */
+    .swiper_ct{
+        gap: 43px;
+        padding-left: 2%;
+    }
+    .swiper_slide{
+        gap: 23px;
+    }
+    .swiper_slide .tab{
+        width: 480px;
+    }
+    .swiper_slide .gx_content > h2{
+        font-size: 46px;
+    }
+    .swiper_slide .a53{
+        width: 483px;
+    }
+    .swiper_slide .gx_content > p{
+        padding-top: 65px;
+        padding-bottom: 34px;
+    }
+
+    /* section4 - bespoke */
+    .color_btn{
+        left: 62%;
+    }
+
+    /* section5 - event */
+    .all_content{
+        width: 1100px;
+    }
+    .all_content li{
+        width: 365px;
+    }
+    .planning_ct{
+        margin-left: 18px;
+    }
+    .planning{
+        background-size: 200%;
+    }
+    .event{
+        background-size: 232%;
+    }
+    .membership{
+        background-size: 526%;
+    }
+    .service{
+        background-size: 131%;
+    }
+
+    /* footer */
+    .footer_content{
+        width: 1100px;
+    }
+    .footer_content ul > li > div > ul:last-child{
+        padding-left: 60px;
+    }
+    .footer_content > ul{
+        top: 53%;
+    }
+    .line{
+        margin: 50px 0 60px 0;
+    }
+    .footer_ct{
+        width: 1100px;
+    }
+
+}

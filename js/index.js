@@ -258,6 +258,7 @@ btnAfter.click(function() {
 function moveSlide(num){
   let newleft = num*33.3+'%';
   let vLeft = num*-100+'%';
+  var player = document.getElementById('player');
   $('.slide_container').css('left', vLeft);
   slideNum = num;
   $('.current').text(slideNum+1);
@@ -271,11 +272,11 @@ function moveSlide(num){
     $('.colorcg').css('color', '#202020');
     $('.total').addClass('changed');
     $('.header').addClass('active light');
-    $('.slide_progressbar').css('background-color', 'rgba(0, 0, 0, 0.4)');
+    $('.slide_progressbar').css('background-color', 'rgba(0, 0, 0, 0.3)');
     //$('.slide_progressbar .fill').css('background-color', 'red');
     $('.slide_progressbar .fill').css('left' , newleft);
     $('.slide_progressbar .fill').css('background-color', '#202020');
-   
+    player.pause();
   }else{
     soundControls.css('visibility', '');
     $('.auto_btn').css('visibility', '');
@@ -284,6 +285,9 @@ function moveSlide(num){
     $('.slide_progressbar').css('background-color', '');
     $('.slide_progressbar .fill').css('left', '');
     $('.slide_progressbar .fill').css('background-color', '');
+    player.load();
+    player.muted = true;
+    soundControls.removeClass('icon_sound_on').addClass('icon_sound');
   }
   
 }
@@ -452,7 +456,6 @@ $(function(){
       }
 
       //쿠키 삭제 함수
-    
       function delCookie(name,value){            
 
         let date = new Date();
@@ -477,10 +480,9 @@ $(function(){
         function getCookie(name){
             let visited = false;
             let cookies = document.cookie.split(';'); //문자열 ; 구분해서 배열 생성
-            
             for(let cookie of cookies){
                 if(cookie.indexOf(name) > -1){
-                    visited = true;
+                  visited = true;
                 }
             }
             if(visited){
@@ -498,9 +500,6 @@ $(function(){
             하루안보기 체크하고 닫으면 - 쿠키지운다
             체크하고 닫으면 - 쿠키생성
         */
-
-
-        
         popupClose.addEventListener('click',()=>{
             popup.style.display = 'none';
             if(popupCheckBox.checked){ //체크되었다면, 팝업을 다시 안보겠다, 쿠키생성
