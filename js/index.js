@@ -115,6 +115,69 @@ $('.sub_category_wrap').mouseleave(function(){
 });
 
 
+
+/* MOBILE BAR CLICK */
+
+function hamburger(){
+  console.log("11111");
+  $('.mobile_sub').show();
+}  
+// $('.hamburger').click(function(){
+//   $('.mobile_sub').show();
+// });
+
+$('.fa-x').click(function(e){
+  e.preventDefault();
+  $('.mobile_sub').hide();
+});
+
+
+$('.two_depth').children('a').click(function(){
+
+ // $(this).children('ul.fff').toggle();
+ $(this).next().toggle();
+
+  if( $(this).hasClass('.active ') == false) {
+    $(this).addClass('.active ');
+    $(this).find('i:eq(0)').hide();
+    $(this).find('i:eq(1)').show();
+  }else{
+    $(this).removeClass('.active ');
+    $(this).find('i:eq(0)').show();
+    $(this).find('i:eq(1)').hide();
+  }
+});
+
+// $('.mobile_sub_wrap > li > ul').click(function(){
+//     $(this).children('li').toggle();
+// });
+
+
+// $('.two_depth').click(function(){
+//   $(this).toggle();
+// });
+
+$('.two_depth > ul > li > a').click(function(){
+  $(this).next().toggle();
+
+  if( $(this).hasClass('sel') == false) {
+    $(this).addClass('sel');
+    $(this).find('i:eq(0)').hide();
+    $(this).find('i:eq(1)').show();
+  }else{
+    $(this).removeClass('sel');
+    $(this).find('i:eq(0)').show();
+    $(this).find('i:eq(1)').hide();
+  }
+
+  //$(this).children('ul').toggle();
+  //$('.mobile_sub_wrap > li > ul > li > .three_depth').toggle();
+});
+
+
+
+
+
 // $('.sub_category_wrap').mouseout(function(){
 //   console.log('1111:', $(this).hasClass('useSubMenu'));
 //   if ($(this).hasClass('useSubMenu')) {
@@ -225,6 +288,8 @@ $('.header .header_inner').hover(
     $('.menu_list > a').css('color','').stop().slideDown(400);
   }
 );
+
+
 
 
 
@@ -508,3 +573,18 @@ $(function(){
                 delCookie('ABC','Main Page');
             }
         });
+
+
+
+        /* 풀페이지 끄기 */
+
+        /*
+        $(window).resize(function(){
+          if($(this).width() <= 768){
+            fullpage_api.destroy('all');
+          }else{
+            fullpageActivate();
+          }
+      });
+      $(window).trigger('resize');
+      */

@@ -174,6 +174,8 @@ body {
     background-size: cover;
     position: relative;
     padding-top:42%;
+    height: 700px;
+    box-sizing: border-box;
 }
 .cukerimg .main_text{
     position: absolute;
@@ -457,7 +459,8 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
-/* #f0f0f0 */
+
+
 .brand_links{
     display: flex;
     justify-content: center;
@@ -475,77 +478,47 @@ body {
     height: 80px;
     border-radius: 10px;
     display: inline-block;
-}
-.brand_links .cj01 a{
-    background: url(../img/cuker/logo/cj01.png) no-repeat #f0f0f0 center;
+    position: relative;
+    background: #f0f0f0;
     background-size: 70%;
 }
-.brand_links .cj02 a{
-    background: url(../img/cuker/logo/cj02.png) no-repeat #f0f0f0 center;
-    background-size: 62%;
+.brand_links li > a > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 125px;
 }
-.brand_links .fredit a{
-    background: url(../img/cuker/logo/fredit.png) no-repeat #f0f0f0 center;
-    background-size: 62%;
+.brand_links li > a > h4{
+    display: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 80px;
 }
-.brand_links .daesang a{
-    background: url(../img/cuker/logo/daesang.png) no-repeat #f0f0f0 center;
-    background-size: 87%;
+.brand_links .cj02 img{
+    width: 110px;
 }
-.brand_links .dongwon a{
-    background: url(../img/cuker/logo/dongwon.png) no-repeat #f0f0f0 center;
-    background-size: 62%;
+.brand_links .daesang img{
+    width: 170px;
 }
-.brand_links .ranking a{
-    background: url(../img/cuker/logo/ranking.png) no-repeat #f0f0f0 center;
-    background-size: 64%;
+.brand_links .shinsegae img{
+    width: 160px;
 }
-.brand_links .mychef a{
-    background: url(../img/cuker/logo/mychef.png) no-repeat #f0f0f0 center;
-    background-size: 62%;
+.brand_links .ottgi img{
+    width: 160px;
 }
-.brand_links .kitchen a{
-    background: url(../img/cuker/logo/kitchenstory_black.png) no-repeat #f0f0f0 center;
-    background-size: 54%;
-}
-.brand_links .shinsegae a{
-    background: url(../img/cuker/logo/sinsegaefood.png) no-repeat #f0f0f0 center;
-    background-size: 76%;
-}
-.brand_links .entree a{
-    background: url(../img/cuker/logo/entree.png) no-repeat #f0f0f0 center;
-    background-size: 62%;
-}
-.brand_links .ottgi a{
-    background: url(../img/cuker/logo/ottgi.png) no-repeat #f0f0f0 center;
-    background-size: 70%;
-}
-.brand_links .onthe a{
-    background: url(../img/cuker/logo/open-the-table.png) no-repeat #f0f0f0 center;
-    background-size: 76%;
-}
-.brand_links .kaviar a{
-    background: url(../img/cuker/logo/kaviar.png) no-repeat #f0f0f0 center;
-    background-size: 81%;
-}
-.brand_links .tasty a{
-    background: url(../img/cuker/logo/tasty.png) no-repeat #f0f0f0 center;
-    background-size: 76%;
-}
-.brand_links .pulmuone a{
-    background: url(../img/cuker/logo/pulmuone.png) no-repeat #f0f0f0 center;
-    background-size: 65%;
-}
-.brand_links .fresheasy a{
-    background: url(../img/cuker/logo/fresheasy.png) no-repeat #f0f0f0 center;
-    background-size: 65%;
-}
-.brand_links li:hover a{
+.brand_links li:hover h4{
     width:220px;
     height: 80px;
     border-radius: 10px;
     display: inline-block;
     background: #3e89dd;
+    display: block;
+}
+.brand_links li:hover img{
+    display: none;
 }
 .brand_links li p{
     opacity: 0;
@@ -841,8 +814,7 @@ h3.add_info {
     gap: 30px;
     padding-left: 70px;
 }
-.lang .sns .fbook{
-    background: url(../img/icon/facebook.svg) no-repeat;
+.lang .sns .fbook img{
     width:22px;
     height: 41px; 
     display: block;
@@ -850,24 +822,21 @@ h3.add_info {
     fill: #202020;
     filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
 }
-.lang .sns .insta{
-    background: url(../img/icon/instagram.png) no-repeat;
+.lang .sns .insta img{
     width:40px;
     height: 41px;
     display: block;
     background-size: 100%;
     filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
 }
-.lang .sns .youtube{
-    background: url(../img/icon/youtube.png) no-repeat;
+.lang .sns .youtube img{
     width:50px;
     height: 48px;
     display: block;
     background-size: 100%;
     filter:invert(58%) sepia(9%) saturate(8%) hue-rotate(347deg) brightness(89%) contrast(90%);
 }
-.lang .sns .blog{
-    background: url(../img/icon/blog.png) no-repeat;
+.lang .sns .blog img{
     width:43px;
     height: 41px;
     display: block;
@@ -888,17 +857,21 @@ h3.add_info {
     font-weight: bold; 
     display: inline-block;
 }
+.info .text li > span{
+    font-weight: 500;
+}
 .info .if01, .if02 {
     display:flex;
-    gap: 23px;
+    gap: 0 23px;
+    flex-wrap: wrap;
 }
-.info .if01 span {
+.info .if01 li {
     position: relative;
 }
-.info .if02 span {
+.info .if02 li {
     position: relative;
 }
-.info .if01 span:after{
+.info .if01 li:after{
     content: '';
     width: 1px;
     height: 15px;
@@ -907,7 +880,7 @@ h3.add_info {
     top: 9px;
     left: -12px;
 }
-.info .if01 span:first-child:after{
+.info .if01 li:first-child:after{
     background: none;
 }
 .info .if01 .info_links{
@@ -920,7 +893,7 @@ h3.add_info {
 .info_links{
     color: #fff;
 }
-.info .if02 span:after{
+.info .if02 li:after{
     content: '';
     width: 1px;
     height: 15px;
@@ -929,7 +902,10 @@ h3.add_info {
     top: 9px;
     left: -12px;
 }
-.info .if02 span:first-child:after{
+.info .if02 li:first-child:after{
+    background: none;
+}
+.info .if02 li:last-child:after{
     background: none;
 }
 .link{
@@ -966,6 +942,5 @@ h3.add_info {
     margin: 0 auto;
     /* background: #458792; */
     padding-bottom: 28px;  
-    position: relative;
+    position: relative; 
 }
-
