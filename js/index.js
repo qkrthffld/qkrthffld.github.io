@@ -22,16 +22,16 @@
       fullPageIdx = destination.index; 
        
       if(destination.index == 0){
-        $('.fixed_wrap').css('background-color',''); 
+        $('.header').css('background-color',''); 
         $('.header').removeClass('active light');
       } else if (destination.index == 1) {
-        $('.fixed_wrap').css('background-color',''); 
+        $('.header').css('background-color',''); 
         $('.header').addClass('active light');
       } else if (destination.index == 2) {
-        $('.fixed_wrap').css('background-color',''); 
+        $('.header').css('background-color',''); 
       } else if (destination.index == 3) {
         $('.header').removeClass('active light');
-        $('.fixed_wrap').css('background-color',''); 
+        $('.header').css('background-color',''); 
 
         var data = false;
         $('.led_imgs li').removeClass();
@@ -73,9 +73,9 @@
 
       } else if (destination.index == 5) {
         $('.header').addClass('active light');
-        $('.fixed_wrap').css('background-color','white');
+        $('.header').css('background-color','white');
          
-      }
+      }     
 	}
 });
 
@@ -578,13 +578,49 @@ $(function(){
 
         /* 풀페이지 끄기 */
 
-        /*
+        
         $(window).resize(function(){
-          if($(this).width() <= 768){
+          if($(this).width() <= 1024){
             fullpage_api.destroy('all');
+            var data = false;
+            $('.led_imgs li').removeClass();
+            if (scrollCnt == 0) {
+              console.log('scroll');
+              scrollCnt ++;
+              $('.led_imgs li').addClass('img_sm');
+            } else if (scrollCnt == 1) {
+              console.log('scroll1111');
+              $('.led_imgs li').addClass('img_sm');
+              scrollCnt ++;
+            } else if (scrollCnt == 2) {
+              console.log('scrol22222');
+              $('.led_imgs li').addClass('img_sm');
+              $('.led_ct').show().css('left', 0);
+              scrollCnt ++;
+            } else {
+              console.log('scroll3333');
+              $('.led_imgs li').addClass('img_lg');
+              $('.led_ct').css('left', '-'+ 500 +'%');
+              data = true;
+              scrollCnt = 0;
+            }
+
+
+            //$('.bespoke_img').bxSlider();
+            $('.bespoke_img > li').slick({
+              slide: 'li',
+              slidesToScroll : 1,
+            });
+
+            $(".accordion_change > ul").accordion({
+              collapsible : true,      // 클릭시 모두 닫게 한다.
+              active : true            // Boolean or Integer : true - 페이지 로딩시 모두 닫혀 있는 상태, 0일경우 첫번째 메뉴가 열려 있는 상태로 로딩
+              });
+
           }else{
             fullpageActivate();
           }
       });
       $(window).trigger('resize');
-      */
+
+      

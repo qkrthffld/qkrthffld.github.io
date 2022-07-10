@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/fullpage.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     
@@ -879,17 +880,17 @@
             <h2 class="hidden_title">LED TV</h2>
             <ul class="led_imgs">
                 <li class="img_lg"></li>
-                <!--<li class="img_md"></li> -->
-                <!--<li class="img_sm"></li> -->
-                <!-- <li class="led_ct">
+                <li class="img_md"></li>
+                <li class="img_sm"></li>
+                <li class="led_ct">
                     <div class="bg"></div>
-                    <div class="led_text">
+                    <!-- <div class="led_text">
                         <h2>2022 Neo QLED</h2>
                         <p>16년 연속 세계판매 1위 QLED<br/>
                             초고화질 대화면이 주는 압도적인 몰입감을 경험하세요.</p>
                         <a href="">구매 혜택 보기<i class="fa-solid fa-angle-right"></i></a>
-                    </div>
-                </li>  -->
+                    </div> -->
+                </li> 
             </ul>
 
             <div class="led_ct">
@@ -911,7 +912,7 @@
                     <li class="warm"></li>
                     <li class="brown"></li>
                     <li class="gray"></li>
-                </ul>
+                </ul> 
             </div>
             <div class="color_btn">
                 <a href="javascript:void(0);" class="black_btn black_btn_border"></a>
@@ -919,6 +920,10 @@
                 <a href="javascript:void(0);" class="warm_btn"></a>
                 <a href="javascript:void(0);" class="brown_btn"></a>
                 <a href="javascript:void(0);" class="gray_btn"></a>
+            </div>
+            <div class="arrow_btn">
+                <div class="prev"><a href="javascript:void(0);"><img src="img/icon/left.png" alt="이전버튼"></a></div>
+                <div class="next"><a href="javascript:void(0);"><img src="img/icon/right.png" alt="다음버튼"></a></div>
             </div>
     
             <div class="bespoke_ct">
@@ -991,9 +996,9 @@
         <section class="footer_content section">
             <h2 class="hidden_title">footer top</h2>
             <ul>
-                <li>
-                    <h3>제품<i class="fa-solid fa-angle-right"></i></h3>
-                    <div>
+                <li class="accordion_change">
+                    <a href=""><span>제품<i class="fa-solid fa-angle-right"></i></span></a>
+                    <div class="accordion_change">
                         <ul class="link list01">
                             <li><a href="">갤럭시</a></li>
                             <li><a href="">스마트폰</a></li>
@@ -1021,8 +1026,8 @@
                     </div>
                 </li>
     
-                <li>
-                    <h3>고객서비스<i class="fa-solid fa-angle-right"></i></h3>
+                <li class="accordion_change">
+                    <a href=""><span>고객서비스<i class="fa-solid fa-angle-right"></i></span></a>
                     <ul class="link list03">
                         <li><a href="">삼성닷컴FAQ</a></li>
                         <li><a href="">이메일상담</a></li>
@@ -1037,8 +1042,8 @@
                     </ul>
                 </li>
     
-                <li>
-                    <h3>지속가능경영<i class="fa-solid fa-angle-right"></i></h3>
+                <li class="accordion_change">
+                    <a href=""><span>지속가능경영<i class="fa-solid fa-angle-right"></i></span></a>
                     <ul class="link list04">
                         <li><a href="">개요</a></li>
                         <li><a href="">환경</a></li>
@@ -1051,8 +1056,8 @@
                     </ul>
                 </li>
     
-                <li>
-                    <h3>회사소개<i class="fa-solid fa-angle-right"></i></h3>
+                <li class="accordion_change">
+                    <a href=""><span>회사소개<i class="fa-solid fa-angle-right"></i></span></a>
                     <ul class="link list05">
                         <li><a href="">기업정보</a></li>
                         <li><a href="">사업정보</a></li>
@@ -1067,14 +1072,14 @@
                     </ul>
                 </li>
     
-                <li>
-                    <h3>윤리&준법정신<i class="fa-solid fa-angle-right"></i></h3>
+                <li class="accordion_change">
+                    <a href=""><span>윤리&준법정신<i class="fa-solid fa-angle-right"></i></span></a>
                     <ul class="link list06">
                         <li><a href="">경영원칙↗</a></li>
                         <li><a href="">부정제보↗</a></li>
                         <li><a href="">법위반제보↗</a></li>
                     </ul>
-                    <h3 class="add_info">부가정보<i class="fa-solid fa-angle-right"></i></h3>
+                    <a href=""><span class="add_info">부가정보<i class="fa-solid fa-angle-right"></i></span></a>
                     <ul class="link list07">
                         <li><a href="">데이코↗</a></li>
                         <li><a href="">협력회사 사이버 신문고↗</a></li>
@@ -1083,6 +1088,7 @@
                 </li>
             </ul>
         </section>
+
 
         <section class="footer_btt section fp-auto-height">
             <h2 class="hidden_title">footer bottom</h2>
@@ -1182,9 +1188,11 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.8/fullpage.min.js" integrity="sha512-SED4JtVTs/hBH7hr0oqqyV8xicviQn9DX/Ts9APRUzDTZRRexLvIwyMHXu2GxEU3ZcXpZpDTWizJuzZ9BqgIXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <!-- <script src="https://github.com/alvarotrigo/fullPage.js.git"></script> -->
    <!-- <script src="vendors/easings.min.js"></script> -->
-
+   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
    <script src="js/fullpage.min.js"></script>
    <script src="js/fullpage.extensions.min.js"></script>
+   
    
    <script src="js/index.js"></script>
    
