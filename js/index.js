@@ -7,77 +7,81 @@
       scrollCnt = 0,
       //navNum =0;
       prograssbar= $('.slide_progressbar');
+      
 
 
+      fullpageActivate();
 
-
+      function fullpageActivate(){
+        $('#fullpage').fullpage({
+          //options here
+          autoScrolling:true,
+          scrollHorizontally: true,
+          onLeave: function(origin, destination, direction, trigger){
+              //console.log(origin.index,destination.index);
+            fullPageIdx = destination.index; 
+             
+            if(destination.index == 0){
+              $('.header').css('background-color',''); 
+              $('.header').removeClass('active light');
+            } else if (destination.index == 1) {
+              $('.header').css('background-color',''); 
+              $('.header').addClass('active light');
+            } else if (destination.index == 2) {
+              $('.header').css('background-color',''); 
+            } else if (destination.index == 3) {
+              $('.header').removeClass('active light');
+              $('.header').css('background-color',''); 
+      
+              var data = false;
+              $('.led_imgs li').removeClass();
+              if (scrollCnt == 0) {
+                console.log('scroll');
+                scrollCnt ++;
+                $('.led_imgs li').addClass('img_md');
+              } else if (scrollCnt == 1) {
+                console.log('scroll1111');
+                $('.led_imgs li').addClass('img_sm');
+                scrollCnt ++;
+              } else if (scrollCnt == 2) {
+                console.log('scrol22222');
+                $('.led_imgs li').addClass('img_sm');
+                $('.led_ct').show().css('left', 0);
+                scrollCnt ++;
+              } else {
+                console.log('scroll3333');
+                $('.led_imgs li').addClass('img_lg');
+                $('.led_ct').css('left', '-'+ 500 +'%');
+                data = true;
+                scrollCnt = 0;
+              }
+              return data;
+            } else if (destination.index == 4) {
+              $('.header').addClass('active light');
+              $('.fixed_wrap').css('background-color',''); 
+              var bespoke = false;
+              $('.bespoke_ct').css('left', '-'+ 700 +'%'); 
+              if (scrollCnt == 0) {
+                $('.bespoke_ct').css('left', '0px');
+                $('.header').removeClass('light');
+                scrollCnt ++;
+              }else{
+                bespoke = true;
+                scrollCnt = 0; 
+              }
+              return bespoke;
+      
+            } else if (destination.index == 5) {
+              $('.header').addClass('active light');
+              $('.header').css('background-color','white');
+               
+            }     
+        }
+      });
+      }
 
   
-  $('#fullpage').fullpage({
-    //options here
-    autoScrolling:true,
-    scrollHorizontally: true,
-    onLeave: function(origin, destination, direction, trigger){
-        //console.log(origin.index,destination.index);
-      fullPageIdx = destination.index; 
-       
-      if(destination.index == 0){
-        $('.header').css('background-color',''); 
-        $('.header').removeClass('active light');
-      } else if (destination.index == 1) {
-        $('.header').css('background-color',''); 
-        $('.header').addClass('active light');
-      } else if (destination.index == 2) {
-        $('.header').css('background-color',''); 
-      } else if (destination.index == 3) {
-        $('.header').removeClass('active light');
-        $('.header').css('background-color',''); 
 
-        var data = false;
-        $('.led_imgs li').removeClass();
-        if (scrollCnt == 0) {
-          console.log('scroll');
-          scrollCnt ++;
-          $('.led_imgs li').addClass('img_md');
-        } else if (scrollCnt == 1) {
-          console.log('scroll1111');
-          $('.led_imgs li').addClass('img_sm');
-          scrollCnt ++;
-        } else if (scrollCnt == 2) {
-          console.log('scrol22222');
-          $('.led_imgs li').addClass('img_sm');
-          $('.led_ct').show().css('left', 0);
-          scrollCnt ++;
-        } else {
-          console.log('scroll3333');
-          $('.led_imgs li').addClass('img_lg');
-          $('.led_ct').css('left', '-'+ 500 +'%');
-          data = true;
-          scrollCnt = 0;
-        }
-        return data;
-      } else if (destination.index == 4) {
-        $('.header').addClass('active light');
-        $('.fixed_wrap').css('background-color',''); 
-        var bespoke = false;
-        $('.bespoke_ct').css('left', '-'+ 700 +'%'); 
-        if (scrollCnt == 0) {
-          $('.bespoke_ct').css('left', '0px');
-          $('.header').removeClass('light');
-          scrollCnt ++;
-        }else{
-          bespoke = true;
-          scrollCnt = 0; 
-        }
-        return bespoke;
-
-      } else if (destination.index == 5) {
-        $('.header').addClass('active light');
-        $('.header').css('background-color','white');
-         
-      }     
-	}
-});
 
 
 /* HEADER - SUB NAVIGATION  */
@@ -117,11 +121,14 @@ $('.sub_category_wrap').mouseleave(function(){
 
 
 /* MOBILE BAR CLICK */
-
-function hamburger(){
-  console.log("11111");
+$('.mobile_sub').hide();
+$('.fa-bars').click(function(){
+  
   $('.mobile_sub').show();
-}  
+  $('body').css({'position':'fixed', 'overflow':'hidden'});
+ 
+});
+
 // $('.hamburger').click(function(){
 //   $('.mobile_sub').show();
 // });
@@ -129,7 +136,11 @@ function hamburger(){
 $('.fa-x').click(function(e){
   e.preventDefault();
   $('.mobile_sub').hide();
+  $('body').css({'position':'static', 'overflow':'visible'});
 });
+
+
+
 
 
 $('.two_depth').children('a').click(function(){
@@ -137,12 +148,12 @@ $('.two_depth').children('a').click(function(){
  // $(this).children('ul.fff').toggle();
  $(this).next().toggle();
 
-  if( $(this).hasClass('.active ') == false) {
-    $(this).addClass('.active ');
+  if( $(this).hasClass('active ') == false) {
+    $(this).addClass('active ');
     $(this).find('i:eq(0)').hide();
     $(this).find('i:eq(1)').show();
   }else{
-    $(this).removeClass('.active ');
+    $(this).removeClass('.active');
     $(this).find('i:eq(0)').show();
     $(this).find('i:eq(1)').hide();
   }
@@ -582,40 +593,42 @@ $(function(){
         $(window).resize(function(){
           if($(this).width() <= 1024){
             fullpage_api.destroy('all');
-            var data = false;
-            $('.led_imgs li').removeClass();
-            if (scrollCnt == 0) {
-              console.log('scroll');
-              scrollCnt ++;
-              $('.led_imgs li').addClass('img_sm');
-            } else if (scrollCnt == 1) {
-              console.log('scroll1111');
-              $('.led_imgs li').addClass('img_sm');
-              scrollCnt ++;
-            } else if (scrollCnt == 2) {
-              console.log('scrol22222');
-              $('.led_imgs li').addClass('img_sm');
-              $('.led_ct').show().css('left', 0);
-              scrollCnt ++;
-            } else {
-              console.log('scroll3333');
-              $('.led_imgs li').addClass('img_lg');
-              $('.led_ct').css('left', '-'+ 500 +'%');
-              data = true;
-              scrollCnt = 0;
-            }
+            
+
+            $('.led_imgs li').addClass('img_sm');
+           
 
 
-            //$('.bespoke_img').bxSlider();
-            $('.bespoke_img > li').slick({
-              slide: 'li',
-              slidesToScroll : 1,
-            });
 
-            $(".accordion_change > ul").accordion({
-              collapsible : true,      // 클릭시 모두 닫게 한다.
-              active : true            // Boolean or Integer : true - 페이지 로딩시 모두 닫혀 있는 상태, 0일경우 첫번째 메뉴가 열려 있는 상태로 로딩
-              });
+           let mobileSlideNum = 0;
+           let mobileSliderIdx = $('.bespoke_img li').length;
+           
+           //slide prev버튼
+           $('.prev').click(function() {
+             if(mobileSlideNum != 0){
+               moveSlide(mobileSlideNum-1);
+             }else{
+               moveSlide(mobileSliderIdx-1);
+             }
+           });
+
+           // slide after버튼
+           $('.next').click(function() {
+             if(mobileSlideNum != mobileSliderIdx -1){
+                 moveSlide(mobileSlideNum+1);  
+             }else{
+               moveSlide(0);
+             }
+           });
+           function moveSlide(idx){
+            $('.bespoke_img li').hide();
+            $('.bespoke_img li').eq(idx).show();
+            mobileSlideNum = idx;
+           }
+
+
+         
+
 
           }else{
             fullpageActivate();
@@ -623,4 +636,12 @@ $(function(){
       });
       $(window).trigger('resize');
 
-      
+                  /* footer 아코디언 */
+            $(".accordion_active").click(function(){
+              if($(window).width() < 1024 ){
+
+                var submenu = $(this).next().slideToggle();
+                 $(this).parent().siblings().find('.link').slideUp();
+              }
+              
+            });

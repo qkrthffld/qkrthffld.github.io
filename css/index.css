@@ -253,20 +253,30 @@ body,main{
 /* NAVIGATION MOBILE VERSION */
 
 .mobile_sub{
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 400px;
-    background: #fff;
+    /* width: 400px; */
+    /* background: #fff; */
     right: 0;
-    padding: 0 35px 30px 20px;
+    /* padding: 0 35px 30px 20px; */
     height: 100vh;
-    display: none;
+    /* display: none; */
     overflow-y: scroll;
-
+    bottom: 0;
+}
+.mobile_sub > div{
+    background: #fff;
+    padding: 0 35px 30px 20px;
+    height: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    overflow-y: auto;
+    right:0;
+    
 }
 .mobile_sub:after{
     content: '';
-    display: block;
+    /* display: block; */
     background-color: rgba(0,0,0, .8);
     position: fixed;
     right: 0;
@@ -284,7 +294,7 @@ body,main{
 .logo_m{
     background: url(../img/icon/samsung-logo.png)no-repeat;
     display: block;
-    width: 222px;
+    width: 202px;
     height: 50px;
     background-size: 100%;
     text-indent: -9999em;
@@ -1286,7 +1296,9 @@ body,main{
     background-position: -106px -39px;
     background-size: 128%;
 }
-
+.arrow_btn{
+    display: none;
+}
 
 
 
@@ -1554,6 +1566,9 @@ body,main{
     padding-bottom: 28px;  
     position: relative;
     top: -53px;
+}
+.mobile_show{
+    display: none;
 }
 
 
@@ -2245,7 +2260,7 @@ body,main{
         position: relative;
     }
     .led_imgs .img_sm{
-        background-position: -186px;
+        /* background-position: -186px; */
         transition: none;
     }
     .led_imgs .img_lg, .led_imgs .img_md{
@@ -2259,7 +2274,7 @@ body,main{
     }
     .led_ct > .bg, .bespoke_ct .bg{
         background: url(../img/index/background_bg_rotate.png);
-        background-size: 100%;
+        background-size: 100% 100%;
         background-position: 318px;
     }
     .led_ct .led_text, .bespoke_ct .bespoke_text{
@@ -2296,6 +2311,19 @@ body,main{
     .arrow_btn > .next{
         right: 50px;
     }
+    .bespoke_img{
+        width: 500%;
+    }
+
+    .bespoke_img > li{
+        display: block;
+    }
+    .arrow_btn{
+        display: block;
+    }
+
+
+
 
     /* section5 - event */
     .all_ct_wrapper{
@@ -2338,16 +2366,86 @@ body,main{
     }
     .all_content > li > a:hover{
         background-color: transparent;
-    }
+        transform:none;
 
+    }
+    .all_ct_wrapper{
+        position: static;
+        transform:none;
+        padding-top: 81px;
+    }
     /* footer */
     .footer_ct{
         width: 930px;
     }
+    .footer_content{
+        width: 930px;
+      
+    }
     .footer_content > ul{
         transform: none;
+        display: block;
+        width: 930px;
+        margin-top: 80px;
     }
+    .footer_content ul > li > div{
+        display: block;
+    }
+    .footer_content ul > li > div > ul:last-child{
+        padding-left: 0;
+    }
+    .link{
+        display: none;
+    }
+    .footer_content li:last-child .add_info{
+        padding-top: 0;
+    }
+    /* .footer_content > ul > li {
+        padding-top: 20px;
+        border-bottom: 1px solid rgba(0,0,0,.2);
+    } */
+    /* .accordion_active{
+        padding: 30px 0;    
+        
+    } */
     
+    /* .footer_content > ul > li:first-child{
+        border-top: 1px solid rgba(0,0,0,.2);
+    } */
+    .line{
+        margin: 50px 0 60px 0;
+        display: block;
+    }
+    .accordion_change{
+        padding: 30px 0; 
+        display: block;
+        border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+    .accordion_change:last-child{
+        border: none;
+    }
+    .web_show{
+        display: none;
+    }
+    .footer_content .link li {
+        padding-top: 20px;
+    }
+    .list02{
+        padding-top: 0;
+        padding-bottom: 22px;
+    }
+    .list03, .list04, .list05, .list06, .list07{
+        padding-bottom: 22px;
+    } 
+    .accordion_active > span, .footer_content li:last-child .add_info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main_section05{
+        height: auto;
+    }
+
 }
 
 @media (max-width:801px){
