@@ -148,17 +148,27 @@ $('.two_depth').children('a').click(function(){
  // $(this).children('ul.fff').toggle();
  $(this).next().toggle();
 
-  if( $(this).hasClass('active ') == false) {
-    $(this).addClass('active ');
+  if( $(this).hasClass('active') == false) {
+    $(this).addClass('active');
     $(this).find('i:eq(0)').hide();
     $(this).find('i:eq(1)').show();
   }else{
-    $(this).removeClass('.active');
+    $(this).removeClass('active');
     $(this).find('i:eq(0)').show();
     $(this).find('i:eq(1)').hide();
   }
 });
 
+/*
+$('.two_depth').click(function(){
+ 
+   if( $(this).hasClass('active') == false) {
+     $(this).addClass('active');
+   }else{
+     $(this).removeClass('active');
+   }
+ });
+*/
 // $('.mobile_sub_wrap > li > ul').click(function(){
 //     $(this).children('li').toggle();
 // });
