@@ -272,6 +272,7 @@ body,main{
     position: fixed;
     overflow-y: auto;
     right:0;
+    width: 350px;
     
 }
 .mobile_sub:after{
@@ -375,12 +376,44 @@ body,main{
     color: #4a4a4a;
     font-weight: 400;
 }
+.mobile_sub_wrap > li:nth-child(6)> ul {
+    display: block;
+}
+.mobile_sub_wrap > li:nth-child(6)> ul > li > a {
+    line-height: 40px;
+    font-weight: 500;
+    color: #202020;
+}
+.mobile_sub_wrap > li:nth-child(6) > ul:nth-child(2){
+    display: flex;
+    font-size: 15px;
+    padding-left: 0;
+}
+
+.mobile_sub_wrap > li:nth-child(6) > ul:nth-child(2) > li:after{
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #777777;
+    position: absolute;
+    top: 14px;
+    left: -16px;
+}
+.mobile_sub_wrap > li:nth-child(6) > ul:nth-child(2) > li > a{
+    color: #777777;
+}
+.mobile_sub_wrap > li:nth-child(6) > ul:nth-child(3){
+    display: flex;
+    padding-left: 0;
+    padding-top: 29px;
+    gap: 14px;
+}
 .mobile_target{
     padding-top: 45px;
 }
 .mobile_target > li{
     font-size: 16px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     font-weight: bold;
     line-height: 40px;
 }
@@ -493,7 +526,7 @@ body,main{
     /* background-size: cover; */
 }
 .main_slide .slide2{
-    background-image: url(../img/index/slide2.png)no-repeat;
+    background-image: url(../img/index/slide2.png);
 }
 .main_slide .sub_tt{
     font-size: 30px;
@@ -714,7 +747,7 @@ body,main{
     content: '';
 }
 .swiper-container {
-    padding-top:11%;
+    padding-top:9%;
 }
 .swiper-wrapper {
     display:flex;
@@ -722,6 +755,7 @@ body,main{
     position:absolute;
     left:0%;
     transition: 0.8s;
+    /*top: 286px;*/
 }
 
 .swiper_slide{
@@ -1335,7 +1369,9 @@ body,main{
 .arrow_btn{
     display: none;
 }
-
+.list06{
+    padding-bottom: 70px;
+}
 
 
 /* footer_content */
@@ -2122,6 +2158,7 @@ body,main{
     .led_ct .led_text, .bespoke_ct .bespoke_text{
         top: 60%;
         transform: translateY(-60%);
+        width: 100%;
     }
 
     /* section4 - bespoke */
@@ -2291,6 +2328,9 @@ body,main{
         width: 309px;
         height: 414px;
     }
+    /* .swiper-wrapper{
+        top: 0;
+    } */
     
     /* section3 - ledTV */
     .main_section03{
@@ -2311,7 +2351,7 @@ body,main{
     }
     .led_ct > .bg, .bespoke_ct .bg{
         background: url(../img/index/background_bg_rotate.png);
-        background-size: 100% 100%;
+        background-size: cover;
         background-position: 318px;
     }
     .led_ct .led_text, .bespoke_ct .bespoke_text{
@@ -2319,7 +2359,7 @@ body,main{
         margin-left: 0;
         left: 50%;
         transform: translateX(-50%);
-        top: 452px;
+        top: 405px;
     }
     .led_ct .led_text > a, .bespoke_ct .bespoke_text > a{
         margin: 0 auto;
@@ -2602,7 +2642,7 @@ body,main{
         padding-bottom: 30px;
     }
     .led_ct .led_text, .bespoke_ct .bespoke_text{
-        top: 421px;
+        /* top: 421px; */
     }
     .led_ct .led_text > p, .bespoke_ct .bespoke_text > p{
         padding-top: 35px;
@@ -2614,11 +2654,11 @@ body,main{
         padding-top: 33px;
     }
     .led_imgs .img_sm{
-        background-size: 157%;
-        background-position: 90%;
+        background-size: cover;
+        background-position: 80%;
     }
     .bespoke_img .black{
-        background-size: 225%;
+        background-size: cover;
         background-position: -65px;
     }
     .bespoke_img .gold{
@@ -2790,9 +2830,11 @@ body,main{
     }
 
     .bespoke_img .black{
-        background-size: 233%;
+        background-size: cover;
     }
-    
+    .swiper-wrapper{ 
+        top: 22%;
+    }
     
 }
 
@@ -2843,6 +2885,9 @@ body,main{
     }
     #countdown{
         font-size: 37px;
+    }
+    .swiper-wrapper {
+        top: 14%;
     }
     .swiper_active,.swiper_active:before{
         width: 507px;
@@ -2899,13 +2944,13 @@ body,main{
     }
 
     .led_imgs .img_sm{
-        background-size: 204%;
-        background-position: 78%;
+        background-size: cover;
+        background-position: 75%;
     }
     .led_ct .led_text > h2, .bespoke_ct .bespoke_text h2 {
         font-size: 40px;
     }
-    .led_ct .led_text > p{
+    .led_ct .led_text > p, .bespoke_ct .bespoke_text > p {
         font-size: 16px;
         line-height: 26px;
     }
@@ -2916,7 +2961,7 @@ body,main{
     }
 
     .bespoke_img .black{
-        background-size: 302%;
+        background-size: cover;
         background-position: -884px;
     }
     .bespoke_img .gold {
@@ -2997,10 +3042,17 @@ body,main{
     .all_content .collage p{
         font-size: 13px;
     }
+    .info .if01 li:nth-child(2):after,.info .if02 li:nth-child(2):after,
+    .info .if02 li:nth-child(4):after{
+        display: none;
+    }
+    .info .if02 li:nth-child(3):after{
+        background: #202020;
+    }
 }
 
 
-@media (max-width:481px){
+/* @media (max-width:481px){
     .header .logo .logo_img{
         width: 200px;
     }
@@ -3028,7 +3080,7 @@ body,main{
     }
     
    
-}
+} */
 
 
 
