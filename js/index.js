@@ -474,7 +474,7 @@ $(function(){
   /* COUNTDOWN */
 
  
-  CountDownTimer('01/01/2023', 'countdown');
+  CountDownTimer('04/15/2023', 'countdown');
 
   function CountDownTimer(dt, id)
   {

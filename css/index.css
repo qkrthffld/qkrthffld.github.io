@@ -9,6 +9,14 @@ body,main{
 .hidden_title{
     display: none;
 }
+.sub_category_title .sub_list .click_page{
+    font-weight: bold;
+    color: #3e89dd;
+}
+.header .blank_link > .click_page{
+    font-weight: bold;
+    color: #3e89dd;
+}
 
 
 

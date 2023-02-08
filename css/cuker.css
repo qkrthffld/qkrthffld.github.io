@@ -7,6 +7,14 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     color: hsl(0, 0%, 13%);
 }
+.sub_category_title .sub_list .click_page{
+    font-weight: bold;
+    color: #3e89dd;
+}
+.header .blank_link > .click_page{
+    font-weight: bold;
+    color: #3e89dd;
+}
 
 
 /* navigation */
